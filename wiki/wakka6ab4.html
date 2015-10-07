@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=RekomendaciiPoBezopastnostiServerovAMBS/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : РекомендацииПоБезопастностиСерверовAMBS</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%D0%E5%EA%EE%EC%E5%ED%E4%E0%F6%E8%E8%CF%EE%C1%E5%E7%EE%EF%E0%F1%F2%ED%EE%F1%F2%E8%D1%E5%F0%E2%E5%F0%EE%E2AMBS">РекомендацииПоБезопастностиСерверовAMBS</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<strong> <a name=".knowledgebase" href="http://78.46.73.113/wiki/wakka.php?wakka=KnowledgeBase&amp;v=mpj" class="" title="Knowledge&nbsp;Base">В оглавление</a> </strong><br />
+<a name="h51-1"></a><h2>Рекомендации по&nbsp;безопасности серверов IP&nbsp;Studio AMBS</h2>
+<br />
+1. Закройте доступ к&nbsp;<!--notypo-->MySql<!--/notypo--> из&nbsp;вне, оставьте только доступ с&nbsp;ваших ip-адресов: АМБС, удаленных мер&nbsp;и&nbsp;ваших рабочих, если вы&nbsp;непосредственно работаете с&nbsp;базой. <br />
+Для&nbsp;этого нужно консоль mysql выполнить следующие команды:<br />
+<br />
+<div class="indent">/usr/local/billing/mysql/bin/mysql<br />
+use&nbsp;mysql;<br />
+delete from user where Host='%';<br />
+<!--notypo-->GRANT ALL PRIVILEGES ON voip.* to voip@<!--/notypo--><u><em>&lt;your_ip_address&gt;</em></u> <!--notypo--> identified by '<!--/notypo--><u><em>&lt;your_password&gt;</em></u>';</div>
+<br />
+<div class="indent">где: <br />
+<u><em>&lt;your_ip_address&gt;</em></u> &ndash; на&nbsp;ваш ip-адрес (например самого сервера АМБС или&nbsp;удаленной меры).<br />
+<u><em>&lt;your_password&gt;</em></u> &ndash; на&nbsp;ваш новый пароль.</div>
+<br />
+<div class="indent">Например:  </div>
+<br />
+<div class="indent">GRANT ALL&nbsp;PRIVILEGES ON&nbsp;voip.* to&nbsp;voip@192.168.1.1 identified by&nbsp;'djbg123';</div>
+<br />
+<ul><li> Если необходимо организовать доступ с&nbsp;нескольких ip-адресов, дайте несколько команд &ndash; GRANT с&nbsp;соответствующими ip-адресами.</li></ul>
+<br />
+<ul><li> Дайте право пользователю &#147;voip&#148; создавать файлы. Например:  </li></ul>
+<br />
+<div class="indent"><!--notypo-->GRANT FILE ON *.* TO voip@<!--/notypo--><u><em>&lt;ambs_ip_address&gt;</em></u><!--notypo--> identified by 'djbg123'<!--/notypo-->;</div>
+<br />
+<div class="indent">где:<br />
+<u><em>&lt;ambs_ip_address&gt;</em></u> &ndash; ip-адрес АМБС сервера.</div>
+<br />
+<!--notypo--><!--/notypo--><br />
+<ul><li> Дайте права пользователю voip, чтобы он&nbsp;мог устанавливать триггеры на&nbsp;своей базе: </li></ul>
+<br />
+<!--notypo--><!--/notypo--><br />
+<div class="indent"><!--notypo-->grant SUPER on *.* to voip@localhost;<!--/notypo--><br />
+<!--notypo-->grant SUPER on *.* to voip@<!--/notypo--><u><em>&lt;ambs_ip_address&gt;</em></u>;</div>
+<br />
+<!--notypo--><!--/notypo--><br />
+<div class="indent">где: <br />
+<u><em>&lt;ambs_ip_address&gt;</em></u> &ndash; ip-адрес АМБС сервера.</div>
+<br />
+<!--notypo--><!--/notypo--><br />
+<ul><li> В&nbsp;заключении, обновите привилегии, чтобы они&nbsp;вступили в&nbsp;работу:</li></ul>
+<br />
+<div class="indent">flush privileges;</div>
+<br />
+<u><strong>Примечания</strong>:</u> <br />
+<ul><li> установленный ваш&nbsp;новый пароль должен совпадать с&nbsp;«your_password» паролем указанным в&nbsp;конфигурационных файлах системы. 
+</li></ul><div class="indent">По умолчанию в&nbsp;системе, для&nbsp;доступа к&nbsp;базе используется пароль: <em>your_password</em> &ndash; djbg123 </div>
+<br />
+<div class="indent">Если вы&nbsp;решите заменить его, не&nbsp;забудьте изменить его&nbsp;в&nbsp;следующих конфигурационных файлах:</div>
+<br />
+<div class="indent">/usr/local/billing/etc/bill_util.cfg<br />
+/usr/local/billing/hosting/bill/.htaccess<br />
+/usr/local/billing/hosting/admin/.htaccess<br />
+/usr/local/billing/radius/radius.cfg<br />
+/usr/local/billing/radius/card.cfg <em>(опционально, для&nbsp;пользователей карточного модуля)</em><br />
+/usr/local/billing/radius/dial.cfg <em>(опционально, для&nbsp;пользователей диал-ап модуля)</em></div>
+<br />
+2. Смените пароль для&nbsp;системного пользователя IP&nbsp;Studio AMBS – &#147;ipstudio&#148;. В&nbsp;консоли сервера выполните команду: <br />
+<br />
+<div class="indent">passwd ipstudio</div>
+<br />
+<div class="indent">и введите ваш&nbsp;новый пароль. </div>
+<br />
+3. Смените пароль для&nbsp;пользователя  “admin”  в&nbsp;системе IP&nbsp;Studio AMBS, предварительно заведя нового пользователя в&nbsp;группе “Admins”. <br />
+В&nbsp;случае, если вы&nbsp;ошибетесь при&nbsp;смене пароля, у&nbsp;вас будет возможность поправить это. <br />
+<br />
+4. Будьте внимательны  при&nbsp;смене паролей, если после смены паролей у&nbsp;вас возникнут проблемы, свяжитесь с&nbsp;разработчиками.<br />
+<br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Примечание:</strong></td><td  class="usercell"> На&nbsp;АМБС-сервере у&nbsp;пользователя root должен быть доступ в&nbsp;mysql без&nbsp;пароля (update.pl выполняется из&nbsp;под root-а по&nbsp;техническим соображениям). <br />
+АМБС выполняет обновление своих скриптов и&nbsp;базы под&nbsp;этим пользователем, если root не&nbsp;будет иметь доступа в&nbsp;mysql или&nbsp;нужно будет вводить для&nbsp;него пароль, АМБС не&nbsp;сможет обновить свою базу.</td></tr>
+</table></div></div> <br />
+<br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=KnowledgeBase&amp;v=mpj" class="" title="Knowledge&nbsp;Base">В оглавление</a> </strong><br />
+ <br /></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=RekomendaciiPoBezopastnostiServerovAMBS/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

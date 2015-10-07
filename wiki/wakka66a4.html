@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/NetarifikacijaZvonka/PrimerReshenija/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ПримерыРаботыСipStudioAmbs/НетарификацияЗвонка/ПримерРешения</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%CF%F0%E8%EC%E5%F0%FB%D0%E0%E1%EE%F2%FB%D1ipStudioAmbs%2F%CD%E5%F2%E0%F0%E8%F4%E8%EA%E0%F6%E8%FF%C7%E2%EE%ED%EA%E0%2F%CF%F0%E8%EC%E5%F0%D0%E5%F8%E5%ED%E8%FF">ПримерыРаботыСipStudioAmbs/НетарификацияЗвонка/ПримерРешения</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<strong> <a name=".." href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/NetarifikacijaZvonka&amp;v=jz9" class="" title="ПримерыРаботыСipStudioAmbs/НетарификацияЗвонка/..">В оглавление</a> </strong><br />
+<a name="h229-1"></a><h2>Пример решения не&nbsp;тарификации звонков</h2>
+<br />
+Рассмотрим рабочую ситуацию, есть 2 компании использующие один шлюз. Одна компания занимается оригинацией трафика другая терминацией.<br />
+Был&nbsp;добавлен один шлюз двум операторам в&nbsp;режиме 3(оригинация и&nbsp;терминация). У&nbsp;одного из&nbsp;операторов была добавлена трансляция. <br />
+В&nbsp;результате получаем, что&nbsp;иногда звонки отбиваются на&nbsp;входе и&nbsp;иногда прошедшие звонки не&nbsp;ассоциируются с&nbsp;оператором.<br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/uncalc_sample.jpg" alt=" (48&nbsp;Кб)" title=" (48&nbsp;Кб)" width='1090' height='63' /></div><br />
+<br />
+Проверяем каким операторам принадлежит в&nbsp;системе шлюз &#147;192.168.0.20&#148; с&nbsp;помощью формы &laquo;Отчет по&nbsp;операторам&raquo;.<br />
+Из&nbsp;результата видно, что&nbsp;шлюз как&nbsp;и&nbsp;планировалось заведен двум операторам оригинатору и&nbsp;терминатору. <br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/uncalc_chk.jpg" alt=" (126&nbsp;Кб)" title=" (126&nbsp;Кб)" width='466' height='347' /></div><br />
+<br />
+Теперь нужно рассмотреть как&nbsp;эти шлюзы заведены у&nbsp;операторов. <br />
+У&nbsp;терминирующего оператора на&nbsp;шлюзе нет&nbsp;трансляций.<br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/uncalc_term_info.jpg" alt=" (183&nbsp;Кб)" title=" (183&nbsp;Кб)" width='655' height='424' /></div><br />
+<br />
+У&nbsp;оригинирующего оператора присутствует пустая трансляция.<br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/uncalc_orig_info.jpg" alt=" (184&nbsp;Кб)" title=" (184&nbsp;Кб)" width='653' height='424' /></div><br />
+<br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Замечание:</strong></td><td  class="usercell"> Нельзя использовать пустые трансляции. При&nbsp;маршрутизации входящего звонка система ищет сайт, где&nbsp;заведен этот шлюз и&nbsp;проверяет трансляции шлюза. Тот&nbsp;сайт, где&nbsp;входящий звонок удовлетворяет правилам трансляции будет выбран как&nbsp;сайт оригинатора. После выбора сайта, на&nbsp;этом сайте ищется тарифный план, по&nbsp;которому будет производиться тарификация звонка. Точно также происходит и&nbsp;с выбором терминирующего оператора.</td></tr>
+</table></div></div> <br />
+<br />
+В&nbsp;рассматриваемом примере входящий звонок может быть принят и&nbsp;на сайт оригинатора и&nbsp;на сайт терминатора (поскольку по&nbsp;правилам трансляции может пройти на&nbsp;оба сайта), но&nbsp;на сайте терминатора он&nbsp;будет отбит, поскольку нет&nbsp;тарифного плана оригинации. Точно такая же&nbsp;картина происходит и&nbsp;с терминацией, когда звонок отправляется на&nbsp;рассматриваемого терминирующего оператора система может занести его&nbsp;оригинатору и&nbsp;непротарифицировать.<br />
+<br />
+Для&nbsp;того чтобы исправить сложившуюся ситуацию нужно более точно указать правила трансляции. С&nbsp;сайта оригинации нам&nbsp;нужно получать трафик без&nbsp;трансляций, но&nbsp;отправлять трафик с&nbsp;этого сайта не&nbsp;нужно. Исходя из&nbsp;этого условия, мы&nbsp;можем добавить &laquo;вымышленную трансляцию&raquo; на&nbsp;отправку трафика с&nbsp;этого сайта. Трансляцию на&nbsp;прием трафика с&nbsp;этого сайта трогать не&nbsp;будем, трафик идет без&nbsp;трансляций.<br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/uncalc_orig_corr.jpg" alt=" (184&nbsp;Кб)" title=" (184&nbsp;Кб)" width='653' height='424' /></div><br />
+<br />
+На&nbsp;сайте терминирующего оператора работает с&nbsp;точностью до&nbsp;наоборот правило. Принимать трафик не&nbsp;нужно, отправлять трафик без&nbsp;трансляций. Таким образом можно добавить &laquo;вымышленную трансляцию&raquo; на&nbsp;прием трафика и&nbsp;не трогать отправку. <br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/uncalc_orig_corr.jpg" alt=" (184&nbsp;Кб)" title=" (184&nbsp;Кб)" width='653' height='424' /></div><br />
+<br />
+После перетарификации с&nbsp;ретрансляцией номеров уже&nbsp;прошедшего трафика приведенный выше пример будет исправлен, будет точно определен терминирующий оператор, поскольку не&nbsp;будет других вариантов куда отнести звонок. Также прекратятся проблемы с&nbsp;отбоем звонков на&nbsp;входе, поскольку оригинирующей оператор всегда будет определяться точно.<br />
+<br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Замечание:</strong></td><td  class="usercell"> Если в&nbsp;будущем нужно будет изменить или&nbsp;добавить трансляции к&nbsp;шлюзам(клонам), нужно остановить текущий шлюз стоп-датой и&nbsp;добавить новый шлюз(клон) с&nbsp;новыми настройками. Это&nbsp;необходимо чтобы система могла всегда перетарифицировать прошедший ранее трафик. Если изменить рабочий вариант шлюза(клона) на&nbsp;новый, старый прошедший трафик останется без&nbsp;шлюза и&nbsp;будет показан как&nbsp;не&nbsp;калькулированный.</td></tr>
+</table></div></div> <br />
+<br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/NetarifikacijaZvonka&amp;v=jz9" class="" title="ПримерыРаботыСipStudioAmbs/НетарификацияЗвонка/..">В оглавление</a> </strong><br /></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/NetarifikacijaZvonka/PrimerReshenija/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

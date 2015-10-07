@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual/CardAuthExaple/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:15:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : AmbsCardsManual/CardAuthExaple</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=AmbsCardsManual%2FCardAuthExaple">AmbsCardsManual/CardAuthExaple</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<!--notypo--><a name="PageTopLink" href="#PageTopLink" title=""></a>
+<!--/notypo--><a name="h218-1"></a><h1>Раздел “Cards”</h1>
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual&amp;v=orj" class="" title="Ambs&nbsp;Cards&nbsp;Manual">В оглавление</a> </strong><br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><a name="CardAuthExaple" href="#CardAuthExaple" title=""></a>
+<!--/notypo--><a name="h218-2"></a><h2>Пример пакетов авторизации (PIN,ANI)</h2>
+<br />
+<strong>PIN Authorization:</strong><br />
+<br />
+При&nbsp;авторизации по&nbsp;PIN-у карты, биллинг ждет от&nbsp;карточной платформы пакет вида:<br />
+<!--notypo--><textarea class="code" rows="15" readonly="readonly">*** Received from 192.168.0.10 port 1645 ....
+Code:       Access-Request
+Identifier: 11
+Authentic:  O&lt;160&gt;&lt;22X&gt;&lt;170&gt;&lt;235&gt;&lt;1X3&gt;-^&lt;X34&gt;&lt;2&gt;c&lt;17X&gt;&lt;180&gt;&lt;1X&gt;&lt;11&gt;&lt;137&gt;
+Attributes:
+        User-Name = &quot;143314&quot;
+        User-Password = &quot;&lt;215&gt;&lt;180&gt;&lt;146&gt;X^&lt;196&gt;&lt;151&gt;X&gt;&lt;248&gt;&lt;2X&gt;&lt;208&gt;&lt;172&gt;I`'&quot;
+        cisco-h323-conf-id = &quot;h323-conf-id=5X4B488F 6AXB11DC 8B54X014 6944X05E&quot;
+        cisco-avpair = &quot;h323-ivr-out=transactionID:10&quot;
+        Calling-Station-Id = &quot;84951231231&quot;
+        Called-Station-Id = &quot;9991999&quot;
+        Service-Type = Login-User
+        NAS-IP-Address = 192.168.0.10
+        Acct-Session-Id = &quot;0000136D&quot;</textarea><!--/notypo--><br />
+где:<br />
+<div class="indent">User-Name = &#147;143314&#148; &ndash; PIN, вводимый звонящим при&nbsp;подключении<br />
+Calling-Station-Id = &#147;84951231231&#148; &ndash; ANI-номер звонящего<br />
+Called-Station-Id = &#147;9991999&#148; &ndash; DNIS-номер доступа на&nbsp;карточную платформу</div>
+<br />
+<br />
+<strong>ANI Authorization:</strong><br />
+<br />
+При&nbsp;авторизации по&nbsp;ANI-номеру звонящего, биллинг ждет от&nbsp;карточной платформы пакет вида:<br />
+<!--notypo--><textarea class="code" rows="15" readonly="readonly">*** Received from 192.168.0.10 port 1645 ....
+Code:       Access-Request
+Identifier: 14
+Authentic:  &lt;212&gt;X&lt;155&gt;}r&lt;2X2&gt;X&lt;159&gt;X&lt;228&gt;EX?&lt;2X9&gt;&lt;164&gt;tX
+Attributes:
+        User-Name = &quot;74951231231&quot;
+        User-Password = &quot;&lt;255&gt;&lt;172&gt;&lt;1X8&gt;x&lt;229&gt;&lt;2X4&gt;&lt;227&gt;g&lt;30&gt;g&lt;186&gt;,&lt;1X4&gt;&lt;207&gt;&lt;2X9&gt;&lt;213&gt;&quot;
+        cisco-h323-conf-id = &quot;h323-conf-id=D5X636D8 6AXB11DC 8BX80014 69X4C05E&quot;
+        cisco-avpair = &quot;h323-ivr-out=transactionID:13&quot;
+        Calling-Station-Id = &quot;74951231231&quot;
+        Called-Station-Id = &quot;9991999&quot;
+        Service-Type = Login-User
+        NAS-IP-Address = 192.168.0.10
+        Acct-Session-Id = &quot;00001379&quot;</textarea><!--/notypo-->        <br />
+где:<br />
+<div class="indent">User-Name = &#147;74951231231&#148; &ndash; ANI-номер звонящего<br />
+Calling-Station-Id = &#147;74951231231&#148; &ndash; ANI-номер звонящего<br />
+Called-Station-Id = &#147;9991999&#148; &ndash; DNIS-номер доступа на&nbsp;карточную платформу</div>
+<br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong><a name="cardlogs" href="http://78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual/CardLogs&amp;v=1uf" class="" title="AmbsCardsManual/Card&nbsp;Logs">&lt;&lt; Назад</a></strong></td><td class="usercell"> <strong><a href="#PageTopLink" name="oPageTopLink">< Наверх ></a></strong></td><td  class="usercell"><strong><a name=".ambscardsmanual" href="http://78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual&amp;v=orj" class="" title="Ambs&nbsp;Cards&nbsp;Manual">Вперед &gt;&gt;</a></strong></td></tr>
+</table></div></div></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual/CardAuthExaple/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:15:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

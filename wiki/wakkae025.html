@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelEquipments/FormaMvtsServers/InstrukcijaSftp/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:15:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ДокументацияIPStudioAMBS/РазделEquipments/ФормаMvtsServers/ИнструкцияSftp</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%C4%EE%EA%F3%EC%E5%ED%F2%E0%F6%E8%FFIPStudioAMBS%2F%D0%E0%E7%E4%E5%EBEquipments%2F%D4%EE%F0%EC%E0MvtsServers%2F%C8%ED%F1%F2%F0%F3%EA%F6%E8%FFSftp">ДокументацияIPStudioAMBS/РазделEquipments/ФормаMvtsServers/ИнструкцияSftp</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<!--notypo--><a name="PageTopLink" href="#PageTopLink" title=""></a>
+<!--/notypo--><a name="h135-1"></a><h1> Раздел &#147;Calls Info&#148; </h1>
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS&amp;v=oq3" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS">В оглавление</a> </strong><br />
+<ul><li> <strong><a  href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelEquipments/FormaMvtsServers&amp;v=219" class="" title="ДокументацияIPStudioAMBS/РазделEquipments/Форма&nbsp;Mvts&nbsp;Servers">Форма &#147;MVTS Servers&#148;</a></strong>
+<ul><li> <a href="#ИнструкцияSftp" name="oИнструкцияSftp">Инструкция по&nbsp;использованию sftp для&nbsp;подключения сервера</a></li></ul></li></ul>
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><a name="ИнструкцияSftp" href="#ИнструкцияSftp" title=""></a>
+<!--/notypo--><a name="h135-2"></a><h2>Инструкция по&nbsp;использованию sftp для&nbsp;подключения сервера</h2>
+<br />
+Протокол &#147;sftp&#148; более безопасный, но&nbsp;для его&nbsp;использования ваши сервера должны поддерживать ssh-подключение. <br />
+Также нужно будет прописать rsa-ключ для&nbsp;того, чтобы система могла обновлять конфигурационные файлы MVTS-сервера. <br />
+Вы&nbsp;можете сделать это, используя следующую инструкцию:<br />
+<br />
+<strong>1.</strong> На&nbsp;AMBS-сервер нужно войти под&nbsp;пользователем &#147;ipstudio&#148;:<br />
+<div class="indent"><div class="indent"> su&nbsp;&ndash; ipstudio</div></div>
+<br />
+<div class="indent">проверить наличие файла ключей:<br />
+<div class="indent">ls -la /usr/local/billing/.ssh/id_rsa.pub</div></div>
+<br />
+<div class="indent">если такой файл существует, переходим к&nbsp;пункту 3 инструкции.</div>
+<br />
+<strong>2.</strong> Если файл с&nbsp;ключем отсутствует его&nbsp;нужно создать выполнив команду: <br />
+<div class="indent"><div class="indent">ssh-keygen -t rsa&nbsp;</div></div>
+<br />
+<div class="indent">на все&nbsp;вопросы нажимать &#147;Enter&#148;</div>
+<br />
+<strong>3.</strong> На&nbsp;MVTS-сервер зайти под&nbsp;пользователем &#147;ipstudio&#148;: <br />
+<div class="indent"><div class="indent">su &ndash; ipstudio</div></div>
+<br />
+<div class="indent">и выполнить команды: <br />
+<div class="indent">ssh ipstudio@&lt;<em>адрес AMBS-сервера</em>&gt; </div></div>
+<br />
+<div class="indent">ввести пароль для&nbsp;пользователя &#147;ipstudio&#148;, после этого выполните:<br />
+<div class="indent">scp .ssh/id_rsa.pub ipstudio@&lt;<em>адрес MVTS-сервера</em>&gt;:.ssh/authorized_keys  </div></div>
+<br />
+В&nbsp;результате, с&nbsp;AMBS-сервер можно будет подключаться к&nbsp;MVTS-серверу без&nbsp;запроса пароля. <br />
+<br />
+Чтобы проверить правильность подключения, зайдите на&nbsp;AMBS-сервер под&nbsp;пользователем &#147;ipstudio&#148;:<br />
+<div class="indent">su &ndash; ipstudio</div>
+<!--notypo--><!--/notypo--><br />
+и&nbsp;выполните команду: <br />
+<div class="indent">ssh ipstudio@&lt;<em>адрес MVTS-сервера</em>&gt;</div>
+<br />
+Если вы&nbsp;выполнили инструкцию правильно, вы&nbsp;подключитесь к&nbsp;серверу без&nbsp;запроса пароля. <br />
+Если система попросила ввести пароль, значит, вы&nbsp;выполнили инструкцию не&nbsp;полностью и&nbsp;вам нужно повторить процедуру подключение. <br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong><a name="...formamvtsservers" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelEquipments/FormaMvtsServers&amp;v=219" class="" title="ДокументацияIPStudioAMBS/РазделEquipments/Форма&nbsp;Mvts&nbsp;Servers">&lt;&lt; Назад</a></strong></td><td class="usercell"> <strong><a href="#PageTopLink" name="oPageTopLink">< Наверх ></a></strong></td><td  class="usercell"><strong><a name=".dokumentacijaipstudioambs" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS&amp;v=oq3" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS">Вперед &gt;&gt;</a></strong></td></tr>
+</table></div></div></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelEquipments/FormaMvtsServers/InstrukcijaSftp/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:15:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

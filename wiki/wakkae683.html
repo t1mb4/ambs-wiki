@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RoamingServices/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ДокументацияIPStudioAMBS/RoamingServices</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%C4%EE%EA%F3%EC%E5%ED%F2%E0%F6%E8%FFIPStudioAMBS%2FRoamingServices">ДокументацияIPStudioAMBS/RoamingServices</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=KnowledgeBase&amp;v=mpj" class="" title="Knowledge&nbsp;Base">На главную страницу</a> </strong><br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><a name="PageTopLink" href="#PageTopLink" title=""></a>
+<!--/notypo--><a name="h195-1"></a><h1>Роуминг. Организация транзитного и&nbsp;частного роуминга</h1>
+<a name="h195-2"></a><h3>Организация транзитного роуминга</h3>
+<br />
+Система IP&nbsp;Studio AMBS позволяет осуществить транзит выбранного номера через систему с&nbsp;одного оператора на&nbsp;другого.<br />
+Организация транзитного модуля в&nbsp;системе IP&nbsp;Studio AMBS представлена следующим образом:<br />
+<br />
+1. Завести роуминговый номер в&nbsp;базе системы, как&nbsp;роуминговый номер, в&nbsp;форме <strong><a name=".dokumentacijaipstudioambs.razdeldestinations.formaeditdestinations" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelDestinations/FormaEditDestinations&amp;v=aji#ФормаEditDestinations" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Раздел&nbsp;Destinations&nbsp;/&nbsp;Форма&nbsp;Edit&nbsp;Destinations">«Edit destination»</a></strong>. <br />
+При&nbsp;добавлении роумингового номера следует учитывать условия:<br />
+<ul><li> Заполненными должны быть только поля «Destination» и&nbsp;«Code»;</li></ul>
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td  class="usercell"><strong>Примечание</strong>: в&nbsp;поле «Code» указывается непосредственно сам&nbsp;роуминговый номер.</td></tr>
+</table></div></div><br />
+<ul><li> Поле «Country code» можно оставить пустым;
+</li><li> Тип&nbsp;номера нужно указать &ndash; «Roaming».</li></ul>
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/prime2.png" alt=" (3&nbsp;Кб)" title=" (3&nbsp;Кб)" width='970' height='160' /></div><br />
+<br />
+2. Создать роуминговый тарифный план для&nbsp;«Продавца номера» (Оператор 1), добавить в&nbsp;тариф этот номер. <br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/prime3.png" alt=" (15&nbsp;Кб)" title=" (15&nbsp;Кб)" width='988' height='474' /></div><br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Примечание</strong>:</td><td  class="usercell"> Если тарификация будет поминутно, можно указать цену или&nbsp;оставить цену нулевой. <br />
+Номер нужно открыть, убрать галочку «Closed» после его&nbsp;добавления в&nbsp;тарифный план.</td></tr>
+</table></div></div><br />
+3. Создать роуминговый тарифный план для&nbsp;«Покупателя номера» (Оператор 2), добавить в&nbsp;него этот роуминговый номер. <br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/prime8.png" alt=" (15&nbsp;Кб)" title=" (15&nbsp;Кб)" width='988' height='474' /></div><br />
+<br />
+4. Проверить, что&nbsp;в&nbsp;обычном оригинационном тарифе «Продавца номера» (Оператор 1) обязательно присутствует для&nbsp;оригинации код&nbsp;направления, которому принадлежит этот роуминговый номер (в нашем случае, в&nbsp;оригинационном тарифе должно присутствовать направление – «123»), иначе биллинг не&nbsp;примет номер от&nbsp;этого оператора. <br />
+<br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td  class="usercell"><strong>Примечание</strong>: Если у&nbsp;«Продавца номера» нет&nbsp;обычного оригинационного тарифа, его&nbsp;следует добавить для&nbsp;работы роумингового номера.</td></tr>
+</table></div></div><br />
+<br />
+5. У&nbsp;«Продавца номера» (Оператор 1) на&nbsp;его сайте следует закрепить роуминговый тариф продажи (в нашем случае, <!--notypo-->«Oper1_roam_sell»<!--/notypo-->) в&nbsp;поле «Saler roaming rate».<br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/prime6.png" alt=" (4&nbsp;Кб)" title=" (4&nbsp;Кб)" width='999' height='84' /></div><br />
+<br />
+6. У&nbsp;«Покупателя номера» (Оператор 2) на&nbsp;его сайте следует закрепить роуминговый тариф покупки (в нашем случае, <!--notypo-->«Oper2_roam_buy»<!--/notypo-->) в&nbsp;поле «Buyer roaming rate».<br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/prime7.png" alt=" (4&nbsp;Кб)" title=" (4&nbsp;Кб)" width='999' height='84' /></div><br />
+<br />
+7. Проверить в&nbsp;форме <strong><a name=".dokumentacijaipstudioambs.razdelcallsinfo.formaroutstest" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelCallsInfo/FormaRoutsTest&amp;v=vo7#ФормаRoutsTest" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Раздел&nbsp;Calls&nbsp;Info&nbsp;/&nbsp;Форма&nbsp;Routs&nbsp;Test">«Route test»</a></strong>, что&nbsp;этот номер проходит на&nbsp;нужного оператора, в&nbsp;нашем случае «Оператор 2».<br />
+<br />
+8. Сделать тестовый звонок по&nbsp;не-<!--notypo-->VoIP-ным<!--/notypo--> линиям и&nbsp;проверить, как&nbsp;пошел звонок. Номер должен приходить от&nbsp;Оператора 1 и&nbsp;уходить на&nbsp;Оператора 2. <br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td  class="usercell"><strong>Примечание</strong>: Детальную статистику по&nbsp;прошедшим звонкам для&nbsp;транзитного роуминга можно просмотреть в&nbsp;форме <strong><a name=".dokumentacijaipstudioambs.razdelcallsinfo.formacallsdetails" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelCallsInfo/FormaCallsDetails&amp;v=wtw#ФормаCallsDetails" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Раздел&nbsp;Calls&nbsp;Info&nbsp;/&nbsp;Форма&nbsp;Calls&nbsp;Details">«Call Details»</a></strong></td></tr>
+</table></div></div><br />
+<br />
+<a name="h195-3"></a><h3>Роуминг для&nbsp;частных лиц</h3>
+<br />
+Частный роуминг в&nbsp;системе IP&nbsp;Studio AMBS организован следующим образом: <br />
+<div class="indent"></div>
+<strong>1.</strong> В&nbsp;форме «Edit Destinations» завести роуминговый номер (как это&nbsp;написано выше). <br />
+<br />
+<strong>2.</strong> В&nbsp;форме «Edit tariffs» подготовить обычный тарифный план с&nbsp;направлениями (оригинационный), куда планируется производить переадресацию. <br />
+<br />
+<strong>3.</strong> В&nbsp;форме «Roaming» (Service &ndash; Roaming) создать нового роумингового клиента. <br />
+<br />
+<strong>4.</strong> Далее, в&nbsp;роуминговой форме для&nbsp;нового клиента назначить переадресацию с&nbsp;выбранного роумингового номера на&nbsp;номер клиента, закрепив за&nbsp;этим клиентом тарифный план. <br />
+<br />
+В&nbsp;результате, звонок приходящий в&nbsp;систему с&nbsp;выбранного роумингового номера, будет направляться на&nbsp;номер клиента по&nbsp;доступным <!--notypo-->VoIP<!--/notypo-->-линиям.<br />
+<br />
+Основная форма для&nbsp;работы по&nbsp;роумингу с&nbsp;частными лицами, форма «Roaming» в&nbsp;разделе «Services»:<br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/prime1.png" alt=" (4&nbsp;Кб)" title=" (4&nbsp;Кб)" width='840' height='72' /></div><br />
+<br />
+Левая часть формы служит для&nbsp;выполнения операций по&nbsp;работе с&nbsp;роуминг-клиентами, правая для&nbsp;выбора временного интервала за&nbsp;который будет выводиться статистика по&nbsp;прошедшим роуминг-звонкам.<br />
+<br />
+Описание полей формы:<br />
+<br />
+<table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Поле</strong></td><td  class="usercell"><strong>Назначение</strong></td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell"><strong>Login </strong></td><td  class="usercell">Позволяет выбрать для&nbsp;просмотра конкретного роуминг-клиента.<br />
+Значение по&nbsp;умолчанию &ndash; All&nbsp;clients.<br />
+<span class="cite"></span><span class="cite"></span><br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><strong>Time period</strong></td><td  class="usercell">Период времени, за&nbsp;который будут показаны звонки на&nbsp;роуминг-номера.<br />
+Может принимать следующие значения:<br />
+<strong>Today</strong> &ndash; сегодня;<br />
+<strong>Yesterday</strong> &ndash; вчера;<br />
+<strong>3 days</strong> &ndash; три&nbsp;дня;<br />
+<strong>7 days</strong> &ndash; семь дней, не&nbsp;включая текущий день;<br />
+<strong>Month</strong> &ndash; текущий месяц;<br />
+<strong>Last month</strong> &ndash; предыдущий месяц;<br />
+<strong>Period</strong> &ndash; период, заданный вручную полями From-To.  <br />
+Значение по&nbsp;умолчанию: Today.<br />
+<!--notypo--><!--/notypo--><br />
+</td></tr>
+</table>
+<br />
+В&nbsp;форме присутствуют следующие функциональные кнопки:<br />
+<br />
+<table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Кнопка</strong></td><td  class="usercell"><strong>Назначение</strong></td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell"><img src="http://78.46.73.113/wiki/files/view10.png" alt=" (1&nbsp;Кб)" title=" (1&nbsp;Кб)" width='26' height='26' /></td><td  class="usercell"><strong>Add private client</strong>. Добавляет роуминг-клиента в&nbsp;систему.<br />
+<span class="cite"></span><span class="cite"></span><br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><img src="http://78.46.73.113/wiki/files/view14.png" alt=" (1&nbsp;Кб)" title=" (1&nbsp;Кб)" width='26' height='26' /></td><td  class="usercell"><strong>Find roaming user</strong>. Отображает реквизиты зарегистрированных в&nbsp;системе роуминг-клиентов.<br />
+Кнопка работает только при&nbsp;условии &ndash; All&nbsp;clients.<br />
+<span class="cite"></span><span class="cite"></span><br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><img src="http://78.46.73.113/wiki/files/view15.png" alt=" (1&nbsp;Кб)" title=" (1&nbsp;Кб)" width='26' height='26' /></td><td  class="usercell"><strong>Edit client info</strong>. Вызывает форму для&nbsp;редактирования информации о&nbsp;клиенте.<br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><img src="http://78.46.73.113/wiki/files/view13.png" alt=" (1&nbsp;Кб)" title=" (1&nbsp;Кб)" width='26' height='26' /></td><td  class="usercell"><strong>Show calls</strong>. Выводит статистику по&nbsp;прошедшим звонкам.<br />
+<span class="cite"></span><span class="cite"></span><br />
+<br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><img src="http://78.46.73.113/wiki/files/view12.png" alt=" (1&nbsp;Кб)" title=" (1&nbsp;Кб)" width='26' height='26' /></td><td  class="usercell"><strong>Show pays</strong>. Показывает историю платежей на&nbsp;баланс клиента.<br />
+<span class="cite"></span><span class="cite"></span><br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><img src="http://78.46.73.113/wiki/files/view11.png" alt=" (1&nbsp;Кб)" title=" (1&nbsp;Кб)" width='26' height='26' /></td><td  class="usercell"><strong>Show forward history</strong>. Показывает историю переадресации роуминг-номеров на&nbsp;номера клиента.<br />
+<span class="cite"></span><span class="cite"></span><br />
+</td></tr>
+</table>
+<a name="h195-4"></a><h4>Пример организации частного роуминга</h4>
+<br />
+1. Завести роуминговый номер в&nbsp;базе системы, как&nbsp;роуминговый номер, в&nbsp;форме <strong><a  href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelDestinations/FormaEditDestinations&amp;v=aji#ФормаEditDestinations" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Раздел&nbsp;Destinations&nbsp;/&nbsp;Форма&nbsp;Edit&nbsp;Destinations">«Edit destination»</a></strong>. <br />
+При&nbsp;добавлении роумингового номера следует учитывать условия:<br />
+<ul><li> Заполненными должны быть только поля «Destination» и&nbsp;«Code»;</li></ul>
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td  class="usercell"><strong>Примечание</strong>: в&nbsp;поле «Code» указывается непосредственно сам&nbsp;роуминговый номер.</td></tr>
+</table></div></div><br />
+<ul><li> Поле «Country code» оставить пустым;
+</li><li> Тип&nbsp;номера указать &ndash; «Roaming».</li></ul>
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/prime2.png" alt=" (3&nbsp;Кб)" title=" (3&nbsp;Кб)" width='970' height='160' /></div><br />
+<br />
+2. В&nbsp;форме <strong><a name=".dokumentacijaipstudioambs.razdeltariffs.formaedittariffs" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelTariffs/FormaEditTariffs&amp;v=15wc#ФормаEditTariffs" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Раздел&nbsp;Tariffs&nbsp;/&nbsp;Форма&nbsp;Edit&nbsp;Tariffs">«Edit tariffs»</a></strong> cоздать стандартный оригинационный тарифный план. <br />
+<br />
+<br />
+3. В&nbsp;форме «Roaming» завести роуминг-клиента и&nbsp;прикрепить за&nbsp;ним тарифный план, воспользовавшись кнопкой «Add private client».<br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/prime10.png" alt=" (3&nbsp;Кб)" title=" (3&nbsp;Кб)" width='288' height='136' /></div><br />
+<br />
+4. После заведения роуминг-клиента, следует в&nbsp;поле «Login» (1) выбрать созданного клиента, добавить денежную сумму на&nbsp;баланс (2) и&nbsp;назначить переадресацию роумингового номера на&nbsp;номер клиента (3).<br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/prime11.png" alt=" (9&nbsp;Кб)" title=" (9&nbsp;Кб)" width='943' height='287' /></div><br />
+<br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong><a name=".knowledgebase" href="http://78.46.73.113/wiki/wakka.php?wakka=KnowledgeBase&amp;v=mpj" class="" title="Knowledge&nbsp;Base">&lt;&lt; Назад</a></strong></td><td class="usercell"> <strong><a href="#PageTopLink" name="oPageTopLink">< Наверх ></a></strong></td><td  class="usercell"><strong><a name=".dokumentacijaipstudioambs.roamingservices" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RoamingServices&amp;v=1dil" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Roaming&nbsp;Services">Вперед &gt;&gt;</a></strong></td></tr>
+</table></div></div> <br /></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RoamingServices/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

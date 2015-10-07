@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/RabotaCoperatorami/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ЧастыеВопросыИответыПоАМБС/РаботаCоператорами</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%D7%E0%F1%F2%FB%E5%C2%EE%EF%F0%EE%F1%FB%C8%EE%F2%E2%E5%F2%FB%CF%EE%C0%CC%C1%D1%2F%D0%E0%E1%EE%F2%E0C%EE%EF%E5%F0%E0%F2%EE%F0%E0%EC%E8">ЧастыеВопросыИответыПоАМБС/РаботаCоператорами</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<a name="h107-1"></a><h1><!--notypo-->ЧаВО<!--/notypo--> по&nbsp;IP Studio AMBS</h1>
+<br />
+<strong> <a name=".." href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS&amp;v=17ko" class="" title="ЧастыеВопросыИответыПоАМБС/..">В оглавление</a> </strong><br />
+<ul><li> <a name="obshhajainformacijapoambs" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/ObshhajaInformacijaPoAMBS&amp;v=p20" class="" title="ЧастыеВопросыИответыПоАМБС/Общая&nbsp;Информация&nbsp;По&nbsp;AMBS">Общая информация по&nbsp;IP Studio AMBS</a>
+</li><li> <a name="voprosypoustanovkeambs" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/VoprosyPoustanovkeAMBS&amp;v=osy" class="" title="ЧастыеВопросыИответыПоАМБС/Вопросы&nbsp;Поустановке&nbsp;AMBS">Технические вопросы по&nbsp;системе</a>
+</li><li> <a name="rabotacoperatorami" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/RabotaCoperatorami&amp;v=16or" class="" title="ЧастыеВопросыИответыПоАМБС/Работа&nbsp;Cоператорами">Операторы и&nbsp;их параметры</a>
+</li><li> <a name="rabotastarifami" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/RabotaStarifami&amp;v=5yh" class="" title="ЧастыеВопросыИответыПоАМБС/Работа&nbsp;Старифами">Тарифные планы, валюты, цены и&nbsp;направления</a>
+</li><li> <a name="rabotasshljuzami" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/RabotaSshljuzami&amp;v=xe5" class="" title="ЧастыеВопросыИответыПоАМБС/Работа&nbsp;Сшлюзами">Радиус: шлюзы, маршрутизация, трансляция</a> 
+</li><li> <a name="mvtsvoprosy" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/MvtsVoprosy&amp;v=61q" class="" title="ЧастыеВопросыИответыПоАМБС/Mvts&nbsp;Вопросы">MVTS: конфиги, обновление, статистика, sip-hit</a></li></ul>
+<a name="h107-2"></a><h2>Операторы и&nbsp;их параметры</h2>
+<br />
+<ul><li> <u><a href="#OPERTT1" name="oOPERTT1">Как добавить нового оператора?</a></u>
+</li><li> <u><a href="#OPERTT2" name="oOPERTT2">Как проверить правильность заведения оператора? Завел оператора(терминатор), все&nbsp;кажется сделано правильно, но&nbsp;звонки на&nbsp;него не&nbsp;проходят.</a></u>
+</li><li> <u><a href="#OPERTT3" name="oOPERTT3">Как система определяет оригинирующего оператора? Как&nbsp;определяет от&nbsp;какого оператора пришел звонок, ведь один ип&nbsp;может принадлежать нескольким операторам?</a></u>
+</li><li> <u><a href="#OPERTT4" name="oOPERTT4">Мне нужно завести оператору второй шлюз, но&nbsp;чтобы баланс для&nbsp;каждого шлюза считался свой, чтобы можно было выставлять отдельные инвойсы.</a></u>
+</li><li> <u><a href="#OPERTT5" name="oOPERTT5">Мне нужно сделать CDR-файл для&nbsp;партнера, как&nbsp;сделать?</a></u></li></ul>
+<br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="OPERTT1" href="#OPERTT1" title=""></a>
+<!--/notypo--><strong>Как добавить нового оператора?</strong><br />
+<br />
+<strong>Ответ:</strong><br />
+<br />
+Новый оператор добавляется следующим образом:<br />
+<br />
+1. Читаем раздел <a name=".dokumentacijaipstudioambs.razdeloperatory.razdeleditoperators" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelOperatory/RazdelEditOperators&amp;v=jty#РазделEditOperators" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Раздел&nbsp;Операторы&nbsp;/&nbsp;Раздел&nbsp;Edit&nbsp;Operators&nbsp;/">Форма &#147;Edit operators&#148;</a> данного руководства, добавляем нового оператора и&nbsp;заполняем все&nbsp;основные поля параметров оператора, описанные в&nbsp;этом же&nbsp;разделе. <br />
+<br />
+2. Проверяем, что&nbsp;правильно задали:<br />
+<ul><li> тип&nbsp;клиента, как&nbsp;работает с&nbsp;вами этот оператор, по&nbsp;кредиту или&nbsp;по&nbsp;предоплате;
+</li><li> максимальное значение кредита (если оператор работает по&nbsp;кредиту);
+</li><li> статус оператора, оператор должен иметь &ndash; рабочий статус.</li></ul>
+<br />
+3. Создаем тарифные планы для&nbsp;нового оператора: оригинационный, терминационный, роуминговый, в&nbsp;зависимости от&nbsp;того, что&nbsp;предлагает этот оператор.<br />
+<br />
+3. Закрепляем созданные тарифы на&nbsp;сайте нового оператора в&nbsp;соответствующих секциях. Терминационный тариф в&nbsp;терминационной секции, оригинационный – в&nbsp;оригинационной. <br />
+<br />
+4. Добавляем оператору адреса его&nbsp;шлюзов, привратников или&nbsp;пользователей, смотря, чем&nbsp;он&nbsp;пользуется.<br />
+<br />
+На&nbsp;этом процесс добавления нового оператора закончен.<br />
+ <br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="OPERTT2" href="#OPERTT2" title=""></a>
+<!--/notypo--><strong>Как проверить правильность заведения оператора? Завел оператора(терминатор), все&nbsp;кажется сделано правильно, но&nbsp;звонки на&nbsp;него не&nbsp;проходят.</strong><br />
+<br />
+<strong>Ответ:</strong><br />
+<br />
+Вы&nbsp;можете найти инструкцию проверки правильности заведения оператора и&nbsp;тестирования его&nbsp;работы в&nbsp;данном руководстве,<br />
+в&nbsp;разделе <u><strong><a name=".dokumentacijaipstudioambs.razdeloperatory.razdeleditoperators.proverkaoperatora" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelOperatory/RazdelEditOperators/ProverkaOperatora&amp;v=xax" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Раздел&nbsp;Операторы&nbsp;/&nbsp;Раздел&nbsp;Edit&nbsp;Operators&nbsp;/&nbsp;Проверка&nbsp;Оператора">&laquo;Проверка параметров оператора&raquo;</a></strong></u>.<br />
+<br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="OPERTT3" href="#OPERTT3" title=""></a>
+<!--/notypo--><strong>Как система определяет оригинирующего оператора? Как&nbsp;определяет от&nbsp;какого оператора пришел звонок, ведь один ип&nbsp;может принадлежать нескольким операторам?</strong><br />
+<br />
+<strong>Ответ:</strong><br />
+<br />
+1. проверяется, что&nbsp;ip-шлюза не&nbsp;нулевой,<br />
+2. идет проверка по&nbsp;SRC_USER (так как&nbsp;звонок мог&nbsp;прийти от&nbsp;RAS абонента),<br />
+3. проверяется ип&nbsp;и ип&nbsp;шлюза, через который прошел звонок:<br />
+<br />
+<ul><li> если имеется несколько операторов с&nbsp;данным ип&nbsp;и ип&nbsp;шлюза, то&nbsp;идет проверка по&nbsp;трансляциям,</li></ul>
+<br />
+<ul><li> список перебирается в&nbsp;отсортированном порядке по&nbsp;длине сроки трансляций по&nbsp;убыванию,</li></ul>
+<br />
+<ul><li> если DST_NUMBER_IN в&nbsp;результате трансляции преобразовался в&nbsp;DST_NUMBER_BILL и&nbsp;при этом длина DST_NUMBER_BILL меньше длины DST_NUMBER_IN, т.к. подразумевается, что&nbsp;должен был&nbsp;срезаться префикс, то&nbsp;система назначает звонок данному оператору,</li></ul>
+<br />
+<ul><li> если в&nbsp;результате перебора ни&nbsp;один оператор не&nbsp;был выбран и&nbsp;имееется оператор без&nbsp;трансляций, то&nbsp;звонок назначается ему,</li></ul>
+<br />
+<ul><li> если в&nbsp;результате так&nbsp;оператор и&nbsp;не найден, то&nbsp;проверяется его&nbsp;SRC_NUMBER_IN, и&nbsp;наличие данного номера в&nbsp;роуминговом тарифе оператора.</li></ul>
+<br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="OPERTT4" href="#OPERTT4" title=""></a>
+<!--/notypo--><strong>Мне нужно завести оператору второй шлюз, но&nbsp;чтобы баланс для&nbsp;каждого шлюза считался свой, чтобы можно было выставлять отдельные инвойсы.</strong><br />
+<br />
+<strong>Ответ:</strong><br />
+<br />
+Баланс оператора &ndash; это&nbsp;стоимость трафика, прошедшего через шлюзы оператора, по&nbsp;тарифам, закрепленным на&nbsp;его сайтах.<br />
+Поскольку требуется, чтобы баланс для&nbsp;каждого шлюза считался отдельно, нужно завести нового оператора с&nbsp;аналогичным именем (например, Оператор-А и&nbsp;Оператора-А2) и&nbsp;добавить ему&nbsp;этот новый шлюз, если цены для&nbsp;нового шлюзы теже, что&nbsp;и&nbsp;для старого шлюза, на&nbsp;сайт нового оператора можно закрепить тарифный план от&nbsp;старого сайта. При&nbsp;изменении цены в&nbsp;этом тарифном плане, цена будет менять для&nbsp;обоих шлюзов одновременно.<br />
+<br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="OPERTT5" href="#OPERTT5" title=""></a>
+<!--/notypo--><strong>Мне нужно сделать CDR-файл для&nbsp;партнера, как&nbsp;сделать?</strong><br />
+<br />
+<strong>Ответ:</strong><br />
+<br />
+CDR-файл или&nbsp;&laquo;детализация звонков&raquo; делается в&nbsp;форме &#147;Call Details&#148; (Calls &ndash; Call details).<br />
+<br />
+1. Выбираете оператора для&nbsp;которого делаете файл. Выбираете его&nbsp;в&nbsp;&laquo;оригинирующем&raquo; или&nbsp;в&nbsp;&laquo;терминирующем&raquo; списке, в&nbsp;зависимости от&nbsp;того какой оператор.<br />
+<br />
+2. Выбрать &laquo;период времени&raquo; за&nbsp;который будут выбираться данные по&nbsp;звонкам.<br />
+<br />
+3. Выбрать &laquo;тип звонков&raquo;, которые будут включены в&nbsp;отчет. Нужны только &laquo;не нулевые звонки&raquo; (not zero calls).<br />
+<br />
+4. Нажав кнопку &#147;Show CDR&nbsp;parameters&#148; нужно задать поля которые будут включены в&nbsp;файл:<br />
+<ul><li> Обязательные поля для&nbsp;любой сверки:
+</li></ul><div class="indent">Столбик &#147;Destination&#148;<br />
+<ul><li> number bill</li></ul></div>
+<br />
+<div class="indent">Столбик &#147;Data, Time&#148;<br />
+<ul><li> connection time
+</li><li> session time</li></ul></div>
+<br />
+<ul><li> поля устанавливаемые в&nbsp;зависимости от&nbsp;типа оператора:
+</li></ul><div class="indent"><u>для оригинирующего оператора</u>:<br />
+Столбик &#147;Source&#148;<br />
+<ul><li> ip&nbsp;</li><li> price</li></ul></div>
+<br />
+<div class="indent"><u>для терминирующего оператора</u>:<br />
+Столбик &#147;Destination&#148;<br />
+<ul><li> ip&nbsp;</li><li> price</li></ul></div>
+<br />
+<div class="indent">Больше никаких полей не&nbsp;должно быть выбрано.</div>
+<br />
+5. Для&nbsp;сохранения изменений нажать &#147;Update&#148;.<br />
+<br />
+6. Для&nbsp;запуска выборки и&nbsp;формирования файла нажать &#147;Show info&#148;.<br />
+<br />
+Будет создан файл в&nbsp;виде ссылки(Last generated file), нажимаем правой кнопкой мыши и&nbsp;выбираем пункт &ndash; &laquo;Сохранить объект как...&raquo;, указываем путь на&nbsp;своем жестком диске и&nbsp;сохраняем файл на&nbsp;диск.<br />
+<br />
+Все. Теперь файл можно переименовать в, например &ndash; &laquo;CDR_для_сверки.csv&raquo; и&nbsp;отправить оператору.<br />
+<br />
+<hr noshade="noshade" size="1" /></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/RabotaCoperatorami/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

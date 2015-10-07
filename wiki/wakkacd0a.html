@@ -1,0 +1,144 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=NastrojjkaSkriptaProverkiSostojanijaRadiusa&v=4mq by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:10:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>
+  	IpstudioWiki : Настройка&nbsp;Скрипта&nbsp;Проверки&nbsp;Состояния&nbsp;Radiusа  </title>
+			  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <link rel="stylesheet" type="text/css" href="themes/default/css/wakka.css" />
+  <link rel="shortcut icon" href="themes/default/icons/wacko.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" title="RecentChanges in RSS" href="xml/recentchanges_ipstudiowiki.xml" />
+  <link rel="alternate" type="application/rss+xml" title="History/revisions of НастройкаСкриптаПроверкиСостоянияRadiusа in RSS" href="wakkafc0b.php?wakka=NastrojjkaSkriptaProverkiSostojanijaRadiusa/revisions.xml" />
+
+<script language="JavaScript" type="text/javascript" src="js/default.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/protoedit.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/wikiedit2.js"></script>
+
+</head>
+
+<body onload="all_init();" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0">
+
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+<form action="http://78.46.73.113/wiki/wakka.php?wakka=Login"  method="post" >
+<input type="hidden" name="wakka" value="Login" />
+<input type="hidden" name="action" value="login" />
+<div class="header">
+  <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  	<tr>
+  		<td align="left" class="logo_header">
+  		
+  		</td>
+  		<td align="right" valign="top" class="logo_header"> 
+								<span>
+					<a href="wakka6b42.html?wakka=Login">
+						<b>Вход</b>
+					</a>
+				</span>
+				<!-- <span class="nobr"><input type="hidden" name="goback" value="NastrojjkaSkriptaProverkiSostojanijaRadiusa" 
+				/><strong>Вход:&nbsp;</strong><input 
+				type="text" name="name" size="18" class="login" />&nbsp;Пароль:&nbsp;<input type="password" name="password"  
+				class="login" size="8" />&nbsp;<input type="image" 
+				src="http://78.46.73.113/wiki/themes/default/icons/login.gif" alt=">>>" align="top" /></span>-->
+							</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="bookmarks">
+							</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="logo_header">
+				<b>
+				<!--     <span class="main">IpstudioWiki:</span> -->
+				     <span class="main"><a href="wakkad0e2.html?wakka=KnowledgeBase">Knowledge&nbsp;Base</a></span>
+								     <span class="main">:: НастройкаСкриптаПроверкиСостоянияRadiusа</span>     
+								</b>
+				<!--     <span class="main"><a class="Search" title="" 
+				     href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch&amp;phrase=%CD%E0%F1%F2%F0%EE%E9%EA%E0%D1%EA%F0%E8%EF%F2%E0%CF%F0%EE%E2%E5%F0%EA%E8%D1%EE%F1%F2%EE%FF%ED%E8%FFRadius%E0">...</a></span> -->
+				</td>
+			</tr>
+		</table>
+</form>
+
+<div class="pageBefore">
+	<img src="images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" />
+</div><div class="page">
+<a name="p-1131-1"></a><p class="auto" id="p-1131-1"><strong> <a name=".knowledgebase" href="wakkac109.html?wakka=KnowledgeBase&amp;v=mpj" class="" title="Knowledge&nbsp;Base">В оглавление</a> </strong></p><a name="h227-1"></a><h2>Настройка скрипта проверки состояния Radius-а</h2>
+<br /><a name="p-1131-2"></a><p class="auto" id="p-1131-2">
+Описание настройки дополнительного внешнего скрипта для&nbsp;регулярной проверки состояния демона АМБС и&nbsp;процесса радиуса.</p><br /><a name="p-1131-3"></a><p class="auto" id="p-1131-3">
+1. Проверьте наличие файлов скрипта проверки: </p><div class="indent"><div class="indent">ls -la billing/scripts/check.sh<br />
+ls&nbsp;-la billing/bin/defradpwtst.pl</div></div>
+<br /><a name="p-1131-4"></a><p class="auto" id="p-1131-4">
+ Если таких файлов нет, скачайте их&nbsp;с сервера обновлений АМБС:</p><div class="indent"><div class="indent">scp -r billinst@213.219.246.22:scripts /usr/local/billing/<br />
+scp&nbsp;billinst@213.219.246.22:bin/defradpwtst.pl /usr/local/billing/bin/<br />
+chmod +x /usr/local/billing/scripts/* <br />
+chown -R ipstudio /usr/local/billing</div></div>
+<br /><a name="p-1131-5"></a><p class="auto" id="p-1131-5">
+2. Добавьте в&nbsp;Cron сервера команды на&nbsp;запуск проверки. Выполните в&nbsp;консоли сервера последовательно следующие команды:</p><div class="indent"><div class="indent">echo &gt;&gt; /etc/crontab; <br />
+echo "#IP Studio Radius Live Check" &gt;&gt; /etc/crontab; <br />
+echo "*/15 * * * * root /usr/local/billing/scripts/check.sh &gt;&gt; /usr/local/billing/logs/defradpwtst.log 2&gt;&1"&gt;&gt; /etc/crontab;<br />
+echo &gt;&gt; /etc/crontab;</div></div>
+<br /><a name="p-1131-6"></a><p class="auto" id="p-1131-6">
+ Если используете карточный модуль добавить также: </p><div class="indent"><div class="indent">echo "*/20 * * * * root /usr/local/billing/scripts/cardradchk.sh &gt;&gt; /usr/local/billing/logs/defradpwtst.log 2&gt;&1"&gt;&gt; /etc/crontab; <br />
+echo &gt;&gt; /etc/crontab;</div></div>
+<br /><a name="p-1131-7"></a><p class="auto" id="p-1131-7">
+3. Перезапустите Cron сервера:</p><div class="indent"><div class="indent">/etc/init.d/crond restart  </div></div>
+<br /><a name="p-1131-8"></a><p class="auto" id="p-1131-8">
+4. Отредактировать скрипт указать почтовый адрес куда скрипт будет присылать письма в&nbsp;случае возникновения ошибок.</p><div class="indent">vi /usr/local/billing/scripts/check.sh</div>
+<br />
+<div class="indent">исправить значение строки: <br />
+MAIL_TO='admin@mydomain.com'</div>
+<br /><a name="p-1131-9"></a><p class="auto" id="p-1131-9">
+Cервер будет регулярно выполнять скрипт &laquo;billing/scripts/check.sh&raquo; каждые 15 минут в&nbsp;течении суток. <br />
+Скрипт выполняет следующие действия: </p><ul><li> Проверяет наличие активных процессов &#147;bill_sig_svr.pl&#148;, если такие отсутствуют &ndash; перезапускает демона АМБС.
+</li><li> Обращается к&nbsp;радиусу и&nbsp;инициирует пустой запрос на&nbsp;авторизацию, если радиус не&nbsp;отвечает &ndash; перезапускает радиус.
+</li><li> Результаты проверки скрипт будет записывать в&nbsp;лог-файл &laquo;billing/logs/defradpwtst.log&raquo;</li></ul>
+<br /><a name="p-1131-10"></a><p class="auto" id="p-1131-10">
+<strong> <a  href="wakkac109.html?wakka=KnowledgeBase&amp;v=mpj" class="" title="Knowledge&nbsp;Base">В оглавление</a> </strong></p><br />   <script language="JavaScript" type="text/javascript">
+   var dbclick = "page";
+  </script>
+ <br style="clear:both" />&nbsp;
+</div>
+
+<form action="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch"  method="get" >
+<input type="hidden" name="wakka" value="TextSearch" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+	<tr>
+		<td>
+			 
+			
+			  <span class="searchbar nobr">Поиск: <input type="text" name="phrase" size="25" style="border: none; border-bottom: 1px solid #CCCCAA; padding: 0px; margin: 0px;" /></span>
+		</td>
+		<td align="right">
+			<a href="wakka0e6e.html?wakka=NastrojjkaSkriptaProverkiSostojanijaRadiusa/print" target="_new"><img src="themes/default/icons/1print.gif" title="Версия для печати" alt="Версия для печати"  align="middle" border="0" /></a>		</td>
+	</tr>
+</table>
+
+</form>
+
+
+<table class="copyright" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="left" class="copyright">
+			Created by <a target="_blank" class="copyright" href="http://www.ipstudio.net/">IP Studio Inc.</a>© 2007
+		</td>
+		<td align="right" class="copyright">
+			Powered by <a href="http://wackowiki.com/WackoWiki" target="_blank" title="" class="outerlink">WackoWiki R4.2</a>		</td>
+	</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=NastrojjkaSkriptaProverkiSostojanijaRadiusa&v=4mq by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:10:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

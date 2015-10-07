@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/PerenosAMBS/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ПримерыРаботыСipStudioAmbs/ПереносAMBS</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%CF%F0%E8%EC%E5%F0%FB%D0%E0%E1%EE%F2%FB%D1ipStudioAmbs%2F%CF%E5%F0%E5%ED%EE%F1AMBS">ПримерыРаботыСipStudioAmbs/ПереносAMBS</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<strong> <a name=".." href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong><br />
+<a name="h101-1"></a><h2>Перенос IP&nbsp;Studio AMBS на&nbsp;другой сервер</h2>
+<br />
+<strong>Задача</strong>: Нужно перенести АМБС на&nbsp;другой сервер с&nbsp;другим IP-адресом.<br />
+<br />
+<strong>Решение</strong>: <br />
+<br />
+<strong>Обязательные условия</strong>: <br />
+<ul><li> На&nbsp;новом сервере должна стоят ОС&nbsp;аналогичная установленной на&nbsp;старом сервере.
+</li><li> На&nbsp;новом сервер должен быть установлен GCC&nbsp;(модуль разработки).</li></ul>
+<br />
+<strong>1.</strong> Отправить письмо с&nbsp;уведомлением в&nbsp;тех.поддержку &#147;IP Studio&#148;, о&nbsp;планируемом переносе системы на&nbsp;новый сервер, с&nbsp;указанием старого и&nbsp;нового адресов.<br />
+<br />
+<strong>2.</strong> Получить новую лицензию, на&nbsp;новый IP-адрес.<br />
+<br />
+<strong>3.</strong> Проверить размер папки &laquo;/usr/local/billing&raquo;, найти достаточно места, чтобы создать архив этой папки для&nbsp;переноса на&nbsp;новый сервер.<br />
+<br />
+4. Выбрать время с&nbsp;минимальной загрузкой работы, останавить все&nbsp;процессы АМБС. <br />
+<br />
+<strong>5.</strong> Проверить, что&nbsp;все процессы АМБС остановлены.<br />
+<br />
+<strong>6.</strong> Сделать архив папки &laquo;/usr/local/billing/&raquo;.<br />
+<br />
+<strong>7.</strong> Запустить процессы АМБС, чтобы старый сервер продолжал маршрутизировать звонки.<br />
+<br />
+<strong>8.</strong> Перенести архив папки АМБС на&nbsp;новый сервер.<br />
+<br />
+<strong>9.</strong> Распаковать архив на&nbsp;новом сервере в&nbsp;аналогичную папку(/usr/local/billing).<br />
+<br />
+<strong>10.</strong> Проделать все&nbsp;шаги, необходимые для&nbsp;установки АМБС на&nbsp;новый сервер из&nbsp;<u><a name=".dokumentacijaipstudioambs.ustanovkanastrojjkaipstudioambs.ustanovkabinarnogodistributiva" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/UstanovkaNastrojjkaIPStudioAMBS/UstanovkaBinarnogoDistributiva&amp;v=143h" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Установка&nbsp;Настройка&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Установка&nbsp;Бинарного&nbsp;Дистрибутива">Инструкции по&nbsp;установке АМБС</a></u>.<br />
+(создать пользователя, поправить конфигурационные файлы, добавить команды в&nbsp;крон и&nbsp;т.д.).<br />
+<br />
+<strong>11.</strong> Положить файлы новой лицензии на&nbsp;новом сервере в&nbsp;папку &laquo;/usr/local/billing/var/&raquo;.<br />
+<br />
+<strong>12.</strong> Настроить sftp-соединения с&nbsp;удаленными MVTS-серверами без&nbsp;аутентификации по&nbsp;<u><a name=".dokumentacijaipstudioambs.razdelequipments.formamvtsservers.instrukcijasftp" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelEquipments/FormaMvtsServers/InstrukcijaSftp&amp;v=lyc" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Раздел&nbsp;Equipments&nbsp;/&nbsp;Форма&nbsp;Mvts&nbsp;Servers&nbsp;/&nbsp;Инструкция&nbsp;Sftp">Инструкции настройки sftp</a></u>.<br />
+<br />
+<strong>13.</strong> Если на&nbsp;новом сервере нет&nbsp;необходимости запускать отдельный <!--notypo-->MySql<!--/notypo-->-сервер, тогда проверить наличие файла &laquo;/etc/my.cnf&raquo; и&nbsp;если такой есть, удалить его&nbsp;или переименовать в&nbsp;&#147;my.cnf.old&#148;. <br />
+<br />
+<strong>14.</strong> Запустить АМБС на&nbsp;новом сервере.<br />
+<br />
+<strong>15.</strong> Проверить <u><a name=".dokumentacijaipstudioambs.ustanovkanastrojjkaipstudioambs.proverkaprocessovambs" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/UstanovkaNastrojjkaIPStudioAMBS/ProverkaProcessovAMBS&amp;v=1asm" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Установка&nbsp;Настройка&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Проверка&nbsp;Процессов&nbsp;AMBS">процессы АМБС</a></u> и&nbsp;<u><a name=".primeryrabotysipstudioambs.logiambs" href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/LogiAMBS&amp;v=hn6" class="" title="Примеры&nbsp;Работы&nbsp;Сip&nbsp;Studio&nbsp;Ambs&nbsp;/&nbsp;Логи&nbsp;AMBS">логи</a></u> на&nbsp;предмет критических ошибок.<br />
+<br />
+<strong>16.</strong> Если процесс запуска прошел без&nbsp;проблем, остановить АМБС на&nbsp;старом сервере.<br />
+<br />
+<strong>17.</strong> Изменить конфигурационные файлы MVTS-серверов, перенастроить их&nbsp;на новый IP-адрес радиуса АМБС.<br />
+<br />
+<strong>18.</strong> Изменить конфигурационные файлы АМБС на&nbsp;серверах MVTS, перенастроить их&nbsp;на новый IP-адрес базы АМБС. <br />
+<br />
+<strong>19.</strong> Перезапустить удаленные MVTS (обновить конфигурационные файлы).<br />
+<br />
+<strong>20</strong>. Сбросить и&nbsp;перезапустить процесс &#147;bill_sig_svr.pl&#148; на&nbsp;удаленных MVTS-серверах.<br />
+<br />
+<strong>21.</strong> Проверить работу, прохождение трафика по&nbsp;cdr-ам MVTS-серверов и&nbsp;логам радиуса с&nbsp;использованием нового сервера.<br />
+<br />
+<strong>22</strong>. Изменить файл &laquo;/usr/local/billing/lastupdated&raquo; на&nbsp;удаленных MVTS-серверах на&nbsp;дату начала переноса АМБС.<br />
+<br />
+<strong>23.</strong> Дождаться завершения процесса парсинга cdr-ов на&nbsp;новом сервере АМБС(можно провести в&nbsp;ручную).<br />
+<br />
+<strong>24.</strong> Удалить директорию &laquo;/usr/local/billing/&raquo; на&nbsp;старом сервере АМБС.<br />
+<br />
+Процесс переноса завершен.<br />
+<br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/PerenosAMBS/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

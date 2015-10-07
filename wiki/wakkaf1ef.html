@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=RazdelPrilozhenijj/PrilozhenieTranslations/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : РазделПриложений/ПриложениеTranslations</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%D0%E0%E7%E4%E5%EB%CF%F0%E8%EB%EE%E6%E5%ED%E8%E9%2F%CF%F0%E8%EB%EE%E6%E5%ED%E8%E5Translations">РазделПриложений/ПриложениеTranslations</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<!--notypo--><a name="PageTopLink" href="#PageTopLink" title=""></a>
+<!--/notypo--><a name="h70-1"></a><h1>Приложения</h1>
+<br />
+<strong> <a name=".." href="http://78.46.73.113/wiki/wakka.php?wakka=RazdelPrilozhenijj&amp;v=dj5" class="" title="РазделПриложений/..">В оглавление</a> </strong><br />
+<ul><li> <a name="...razdelprilozhenijj.prilozhenieq931" href="http://78.46.73.113/wiki/wakka.php?wakka=RazdelPrilozhenijj/PrilozhenieQ931&amp;v=77k" class="" title="Раздел&nbsp;Приложений&nbsp;/&nbsp;Приложение&nbsp;Q&nbsp;931">Приложение А. Коды Завершения <!--notypo-->(Disconnect-code-Q931)<!--/notypo--></a>
+</li><li> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=RazdelPrilozhenijj/PrilozhenieDCLocal&amp;v=cn6" class="" title="Раздел&nbsp;Приложений&nbsp;/&nbsp;Приложение&nbsp;DC&nbsp;Local">Приложение Б. Коды Отключения <!--notypo-->(Disconnect-code-local)<!--/notypo--></a>
+</li><li> <a href="#ПриложениеTranslations" name="oПриложениеTranslations">Приложение В. Примеры построения трансляций номеров</a>
+</li><li> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=RazdelPrilozhenijj/PrilozhenieCardCodes&amp;v=15dc" class="" title="Раздел&nbsp;Приложений&nbsp;/&nbsp;Приложение&nbsp;Card&nbsp;Codes">Приложение Г.&nbsp;Коды завершения звонков циски для&nbsp;карточной платформы</a>
+</li><li> <a name="...razdelprilozhenijj.prilozhenieregexp" href="http://78.46.73.113/wiki/wakka.php?wakka=RazdelPrilozhenijj/PrilozhenieRegexp&amp;v=6uo" class="" title="Раздел&nbsp;Приложений&nbsp;/&nbsp;Приложение&nbsp;Regexp">Приложение Д. Примеры числовых форматов регулярных выражений</a></li></ul>
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><a name="ПриложениеTranslations" href="#ПриложениеTranslations" title=""></a>
+<!--/notypo--><a name="h70-2"></a><h2>Приложение В. Примеры построения трансляций номеров</h2>
+<br />
+Основной целью преобразования (трансляции) является приведение телефонных номеров к&nbsp;определенному формату. Для&nbsp;трансляции номеров наиболее часто используются такие операции как&nbsp;добавление, удаление или&nbsp;замена отдельных частей телефонного номера.  <br />
+<br />
+Регулярные выражения, используемые для&nbsp;преобразования номеров, состоят из&nbsp;буквенно-числовых символов и&nbsp;мета-символов, описание которых приведено ниже:    <br />
+<ul><li> <strong>Символ «/»</strong> делит регулярное выражение трансляции на&nbsp;две части: шаблон поиска и&nbsp;строка  замены.  Все, что&nbsp;находится слева от&nbsp;символа «/» является шаблоном поиска (все  номера, подходящие под&nbsp;шаблон поиска, подлежат дальнейшему преобразованию). Все, что&nbsp;находится справа от&nbsp;символа «/», является строкой замены (т.е. тем, на&nbsp;что будет заменен номер, подошедший под&nbsp;шаблон в&nbsp;левой части выражения).  
+</li><li> <strong>Символ «|»</strong> делит шаблон поиска на&nbsp;несколько логических частей.
+</li><li> <strong>Символ «\»</strong> ставится  в&nbsp;правой  части  регулярного  выражения.  Следующая за&nbsp;этим знаком цифра обозначает какую часть шаблона, разделенного символами «|» следует использовать для&nbsp;формирования нового номера 
+</li><li> <strong>Символ «&»</strong> обозначает  все&nbsp;выражение,  подошедшее  под&nbsp;шаблон  поиска. Данный символ употребляется в&nbsp;правой части выражения. 
+</li><li> <strong>Символ «.»</strong> означает любой знак (включая цифры, буквы и&nbsp;символы)    
+</li><li> <strong>Выражение  в&nbsp;квадратных  скобках </strong> используется  только  в&nbsp;шаблоне  поиска  и&nbsp;означает  одну  любую  цифру  из&nbsp;заданного  в&nbsp;скобках  интервала  или&nbsp;последовательности цифр. Например: [<span class="nobr">0&ndash;9</span>] означает одну любую цифру от&nbsp;0 до&nbsp;9. [1234] означает одну цифру от&nbsp;1 до&nbsp;4, [<span class="nobr">1236&ndash;9</span>] означает одну любую цифру из&nbsp;следующих: 1,2,3,6,7,8,9. 
+</li><li> <strong>Число в&nbsp;фигурных скобках </strong> означает количество повторений предшествующего символа (цифры,  буквы,  символа  или&nbsp;выражения).  Например:  .{4}  означает четыре любых символа. [<span class="nobr">0&ndash;9</span>]{2} означает два&nbsp;повторения выражения [<span class="nobr">0&ndash;9</span>], т.е. [<span class="nobr">0&ndash;9</span>] [<span class="nobr">0&ndash;9</span>] 
+</li><li> <strong>Символ «*»</strong> означает любое количество повторений предшествующего символа (включая цифры, буквы или&nbsp;выражения). Например: [<span class="nobr">0&ndash;9</span>]* означает любое количество цифр от&nbsp;0 до&nbsp;9.  &laquo;.*" означает любое количество любых знаков.</li></ul>
+<br />
+<table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Пример</strong></td><td  class="usercell"><strong><!--notypo-->Трансляция/Результат<!--/notypo--></strong></td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Добавить префикс 78# к&nbsp;любому номеру</td><td  class="usercell"><!--notypo-->dst_translate=.*/78#&amp;<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->123456 -&gt; 78#123456<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Заменить любые первые 3 цифры номера на&nbsp;префикс 100#</td><td  class="usercell"><!--notypo-->dst_translate=...|.*/100#\2<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->123456 -&gt; 100#456<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Добавить префикс 78# только к&nbsp;номерам, начинающимся с&nbsp;777</td><td  class="usercell"><!--notypo-->dst_translate=777|.*/78#\1&amp;<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->777123456 -&gt; 78#777123456<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Отрезать перфикс 8182</td><td  class="usercell"><!--notypo-->dst_translate=8182|.*/\2<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->8182123456 -&gt; 8182 | 123456 -&gt; 123456<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Отрезать префикс и&nbsp;заменить его&nbsp;на&nbsp;иной («отрезать» перфикс 8182 и&nbsp;вставить подстроку 777, перед второй подстрокой)</td><td  class="usercell"><!--notypo-->dst_translate=8182|.*/777\2<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->8182123456 -&gt; 8182 | 123456 -&gt; 777 123456<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Отрезать перфикс 1212 и&nbsp;заменить его&nbsp;на&nbsp;префикс 1718, перед второй подстрокой</td><td  class="usercell"><!--notypo-->dst_translate=1212|.*/1718\2<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->1212123456 -&gt; 1212 | 123456 -&gt; 1718 | 123456 -&gt; 1718123456<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Убрать символ # из&nbsp;середины строки («вырезать» символ #, расположенный между 1-й и&nbsp;3-й подстроками)</td><td  class="usercell"><!--notypo-->dst_translate=.*|#|.*/\1\3<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->123#456 -&gt; 123 | # | 456 -&gt; 123456<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Отрезать символ #, завершающий строку</td><td  class="usercell"><!--notypo-->dst_translate=.*|#/\1<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->123456# -&gt; 123456 | # -&gt; 123456<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Добавить символы в&nbsp;конец строки (подставить #77# в&nbsp;конец первой подстроки)</td><td  class="usercell"><!--notypo-->dst_translate=.*|/&amp;#77#<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->123456 -&gt; 123456#77#<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Добавить символы в&nbsp;начало и&nbsp;конец строки (подставить 1001# в&nbsp;начале строки и&nbsp;символ # в&nbsp;конец номера)</td><td  class="usercell"><!--notypo-->dst_translate=.*/1001#&amp;#<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->123456 -&gt; 1001#123456#<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Добавить символы в&nbsp;начало и&nbsp;конец строки (подставить 1001# в&nbsp;начале строки и&nbsp;символ # в&nbsp;конец номера)</td><td  class="usercell"><!--notypo-->dst_translate=.*/1001#&amp;#<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->123456 -&gt; 1001#123456#<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Полностью заменить номер на&nbsp;новый 123456</td><td  class="usercell"><!--notypo-->dst_translate=.*/123456<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->111222333 -&gt; 123456<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">В номерах начинающихся на&nbsp;380, добавить #0# после кода региона(города) и&nbsp;после этого повторить код&nbsp;региона(города) еще&nbsp;раз</td><td  class="usercell"><!--notypo-->dst_translate=380|..|.*/\1\2#0#\2\3<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->380651234567 -&gt; 38065#0#651234567<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">У входящих звонков заменить первую цифру 8 на&nbsp;7 для&nbsp;российских номеров(11 знаков) и&nbsp;отрезать 810 для&nbsp;всех международных</td><td  class="usercell"><!--notypo-->dst_translate=8|........../7\2;810|.*/\2<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Результат:</td><td  class="usercell"><!--notypo-->84957271234 -&gt; 74957271234<!--/notypo--><br />
+<!--notypo-->810866512345674 -&gt; 866512345674<!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+</table>
+<!--notypo--><!--/notypo--><br />
+При&nbsp;необходимости указания пустого номера используется ключевое слово «empty». <br />
+<em><u>Пример</u>:</em><br />
+<div class="indent"><em>При значении параметра src_translate=empty/123456, MVTS преобразует полученный пустой номер вызывающего абонента в&nbsp;номер 123456.</em></div>
+<!--notypo--><!--/notypo--><br />
+MVTS проверяет регулярные выражения в&nbsp;правилах преобразования номеров на&nbsp;присутствие запрещенных символов и&nbsp;при обнаружении удаляет их.  <br />
+Регулярные выражения допускают использование следующих символов:  ^0123456789*#\& <br />
+<!--notypo--><!--/notypo--><br />
+При&nbsp;возникновении  ошибки (недопустимый  символ  в&nbsp;регулярном  выражении), в&nbsp;MVTS результат проверки выводится в&nbsp;трассировочный журнал, который записывается  в&nbsp;файл с&nbsp;названием <!--notypo-->mp.kernel.sh.log-&lt;date&gt;<!--/notypo-->.<br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong><a name="...razdelprilozhenijj.prilozheniedclocal" href="http://78.46.73.113/wiki/wakka.php?wakka=RazdelPrilozhenijj/PrilozhenieDCLocal&amp;v=cn6" class="" title="Раздел&nbsp;Приложений&nbsp;/&nbsp;Приложение&nbsp;DC&nbsp;Local">&lt;&lt; Назад</a></strong></td><td class="usercell"> <strong><a href="#PageTopLink" name="oPageTopLink">< Наверх ></a></strong></td><td  class="usercell"><strong><a name="...razdelprilozhenijj.prilozheniecardcodes" href="http://78.46.73.113/wiki/wakka.php?wakka=RazdelPrilozhenijj/PrilozhenieCardCodes&amp;v=15dc" class="" title="Раздел&nbsp;Приложений&nbsp;/&nbsp;Приложение&nbsp;Card&nbsp;Codes">Вперед &gt;&gt;</a></strong></td></tr>
+</table></div></div></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=RazdelPrilozhenijj/PrilozhenieTranslations/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,282 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=DokumentacijaPoDialapModuljuIpstudioAmbs&v=qs1 by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:10:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>
+  	IpstudioWiki : Документация&nbsp;По&nbsp;Диалап&nbsp;Модулю&nbsp;Ipstudio&nbsp;Ambs  </title>
+			  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <link rel="stylesheet" type="text/css" href="themes/default/css/wakka.css" />
+  <link rel="shortcut icon" href="themes/default/icons/wacko.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" title="RecentChanges in RSS" href="xml/recentchanges_ipstudiowiki.xml" />
+  <link rel="alternate" type="application/rss+xml" title="History/revisions of ДокументацияПоДиалапМодулюIpstudioAmbs in RSS" href="wakka7e54.php?wakka=DokumentacijaPoDialapModuljuIpstudioAmbs/revisions.xml" />
+
+<script language="JavaScript" type="text/javascript" src="js/default.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/protoedit.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/wikiedit2.js"></script>
+
+</head>
+
+<body onload="all_init();" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0">
+
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+<form action="http://78.46.73.113/wiki/wakka.php?wakka=Login"  method="post" >
+<input type="hidden" name="wakka" value="Login" />
+<input type="hidden" name="action" value="login" />
+<div class="header">
+  <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  	<tr>
+  		<td align="left" class="logo_header">
+  		
+  		</td>
+  		<td align="right" valign="top" class="logo_header"> 
+								<span>
+					<a href="wakka6b42.html?wakka=Login">
+						<b>Вход</b>
+					</a>
+				</span>
+				<!-- <span class="nobr"><input type="hidden" name="goback" value="DokumentacijaPoDialapModuljuIpstudioAmbs" 
+				/><strong>Вход:&nbsp;</strong><input 
+				type="text" name="name" size="18" class="login" />&nbsp;Пароль:&nbsp;<input type="password" name="password"  
+				class="login" size="8" />&nbsp;<input type="image" 
+				src="http://78.46.73.113/wiki/themes/default/icons/login.gif" alt=">>>" align="top" /></span>-->
+							</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="bookmarks">
+							</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="logo_header">
+				<b>
+				<!--     <span class="main">IpstudioWiki:</span> -->
+				     <span class="main"><a href="wakkad0e2.html?wakka=KnowledgeBase">Knowledge&nbsp;Base</a></span>
+								     <span class="main">:: ДокументацияПоДиалапМодулюIpstudioAmbs</span>     
+								</b>
+				<!--     <span class="main"><a class="Search" title="" 
+				     href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch&amp;phrase=%C4%EE%EA%F3%EC%E5%ED%F2%E0%F6%E8%FF%CF%EE%C4%E8%E0%EB%E0%EF%CC%EE%E4%F3%EB%FEIpstudioAmbs">...</a></span> -->
+				</td>
+			</tr>
+		</table>
+</form>
+
+<div class="pageBefore">
+	<img src="images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" />
+</div><div class="page">
+<a name="h35-1"></a><h2>Документация по&nbsp;диал-ап модулю IP&nbsp;Studio AMBS</h2>
+<br /><a name="p-4282-1"></a><p class="auto" id="p-4282-1">
+Запуск диалап модуля.</p><br /><a name="p-4282-2"></a><p class="auto" id="p-4282-2">
+Прежде всего нужно отметить, что&nbsp;диал-ап модуль системы является надстройкой к&nbsp;карточному модулю системы IP&nbsp;Studio AMBS и&nbsp;неразрывно с&nbsp;ним связан. <br />
+Авторизация диалап-пользователей будет проводиться по&nbsp;карточкам, которые имеют тип&nbsp;&#147;Dial-up&#148;.</p><br /><a name="p-4282-3"></a><p class="auto" id="p-4282-3">
+1.	Нужно проверить наличие радиуса диал-ап модуля.</p><br />
+<div class="indent">cd /usr/local/billing/bin<br />
+ls</div>
+<br /><a name="p-4282-4"></a><p class="auto" id="p-4282-4">
+Должен присутствовать файл </p><br />
+<div class="indent"><!--notypo-->-rwxr-xr-x    1 ipstudio root      2029579 Jun  5 17:25 rad_dial<!--/notypo--></div>
+<br /><a name="p-4282-5"></a><p class="auto" id="p-4282-5">
+2. Теперь нужно создать файл конфигурации для&nbsp;диалапа</p><br />
+<div class="indent">cd  /usr/local/billing/radius</div>
+<br /><a name="p-4282-6"></a><p class="auto" id="p-4282-6">
+в&nbsp;этой папке нужно создать файл &#147;dial.cfg&#148;, пример </p><br />
+<div class="indent">vi dial.cfg</div>
+<br /><a name="p-4282-7"></a><p class="auto" id="p-4282-7">
+файл должен иметь аналогичную структуру с&nbsp;любым другим файлом конфигурации радиуса, пример:</p><br /><a name="p-4282-8"></a><p class="auto" id="p-4282-8">
+<!--notypo--><div class="code"><pre><span style="color:#226622"># System directories path:</span>
+LogDir         /usr/local/billing/radius/
+DbDir           /usr/local/billing/radius/
+
+<span style="color:#226622"># User a lower trace level in production systems:</span>
+Trace          2
+AuthPort 1914
+AcctPort 1915
+
+<span style="color:#226622"># You will probably want to change this to suit your site.</span>
+&lt;Client DEFAULT&gt;
+  Secret  voipcard
+  DupInterval 0
+&lt;/Client&gt;
+
+
+&lt;Realm DEFAULT&gt;
+  &lt;AuthBy Dial&gt;
+    DBSource        dbi:mysql:voip
+    DBUsername      voip
+    DBAuth          djbg123
+    CP_LOG_FILE     %Ldiallog%y%m%d.%H
+    ACC_LOG_FILE    %Lcdr%y%m%d.%H
+    LOCK_FILE       %Lradius.lock
+    CREDIT_TIME     1800
+    FREE_TIME       60
+    MAX_SEANS       16
+    CREDIT_SEANS    16
+  &lt;/AuthBy&gt;
+&lt;/Realm&gt;</pre></div><!--/notypo--></p><div class="indent"><div class="indent"><div class="indent"><div class="indent"><div class="indent"><div class="indent"><div class="indent"><div class="indent"><div class="indent"><div class="indent"></div></div></div></div></div></div></div></div></div></div><a name="p-4282-9"></a><p class="auto" id="p-4282-9">
+Можно скопировать и&nbsp;вставить весь выше представленный текс в&nbsp;файл конигурации для&nbsp;диалапа. Обязательно нужно проверить следующие параметры и&nbsp;убедиться, что&nbsp;они соответствуют вашим реальным данным:</p><br /><a name="p-4282-10"></a><p class="auto" id="p-4282-10">
+<!--notypo-->LogDi<!--/notypo-->r &ndash; Папка куда диалап-радиус будет писать свои логии. <br />
+По&nbsp;умолчанию &laquo;/usr/local/billing/radius/&raquo;<br />
+Файлы с&nbsp;логами будут иметь следующий формат имени &ndash; <!--notypo-->dialogГГММДД.ЧЧ<!--/notypo-->, пример &ndash; <!--notypo-->dialog060614.15<!--/notypo-->. </p><br /><a name="p-4282-11"></a><p class="auto" id="p-4282-11">
+Trace &ndash; Уровень логирования [<span class="nobr">0&ndash;4</span>]. Значение по&nbsp;умолчанию &ndash; 2. <br />
+Рекомендуется увеличивать значение только при&nbsp;разборе проблем с&nbsp;работой модуля. </p><br /><a name="p-4282-12"></a><p class="auto" id="p-4282-12">
+<!--notypo-->AuthPort, AcctPort<!--/notypo-->  &ndash; Порты аккаунтинга и&nbsp;авторизации на&nbsp;которых будет работать диалап-радиуса. Значения по&nbsp;умолчанию 1914, 1915. </p><br /><a name="p-4282-13"></a><p class="auto" id="p-4282-13">
+<!--notypo-->DBUsername, DBAuth<!--/notypo--> &ndash; Логин и&nbsp;пароль для&nbsp;подключения к&nbsp;<!--notypo-->MySql<!--/notypo-->-базе системы <!--notypo-->IP Studio AMBS<!--/notypo-->. Должны совпадать с&nbsp;аналогичными значениями прописанными в&nbsp;файле конфигурации самой системы &laquo;/usr/local/billing/etc/bill_util.cfg&raquo;.</p><br /><a name="p-4282-14"></a><p class="auto" id="p-4282-14">
+3. Создать скрипт запуска диалап-радиуса. </p><br />
+<div class="indent">cd  /etc/init.d</div>
+<br /><a name="p-4282-15"></a><p class="auto" id="p-4282-15">
+в&nbsp;этой папке нужно создать файл &#147;dial.sh&#148;, пример </p><br />
+<div class="indent">vi dial.sh</div>
+<br /><a name="p-4282-16"></a><p class="auto" id="p-4282-16">
+файл должен иметь аналогичную структуру с&nbsp;любым другим файлом запуска радиус-процесса, пример:</p><br /><a name="p-4282-17"></a><p class="auto" id="p-4282-17">
+<!--notypo--><div class="code"><pre><span style="color:#226622">#!/bin/sh </span>
+CONFIG_DIAL<span style="color:#4400DD">=</span>/usr/local/billing/radius/dial.cfg
+RADIUS<span style="color:#4400DD">=</span>/usr/local/billing/bin/rad_dial
+. /usr/local/billing/etc/bill_util.cfg
+PIDFILE_DIAL<span style="color:#4400DD">=</span>/usr/local/billing/radius/rad_dial.pid
+case $1 in
+  start)
+     echo
+     if [ -f $PIDFILE_DIAL <span style="color:#226622">; then</span>
+      rad_pid<span style="color:#4400DD">=</span>`cat $PIDFILE_DIAL`
+   kill -9 $rad_pid
+   rm -f $PIDFILE_DIAL
+fi
+  echo -n Starting DIAL radiusd: 
+  nice -n -3 sudo -u $OWNER $RADIUS -config_file $CONFIG_DIAL -pid_file $PIDFILE_DIAL  &gt;&gt; /usr/local/billing/logs/radius.err 2&gt;&amp;1
+  touch $PIDFILE_DIAL
+  echo
+<span style="color:#226622">;;</span>
+stop)
+  echo
+  rad_pid<span style="color:#4400DD">=</span>`cat $PIDFILE_DIAL`
+  echo -n Shutting down DIALorize radiusd: $rad_pid
+  kill -9 $rad_pid
+  rm -f $PIDFILE_DIAL
+  echo
+<span style="color:#226622">;;</span>
+restart)
+  $0 stop
+  $0 start
+<span style="color:#226622">;;</span>
+*)
+echo &quot;Usage: radiusd {start<span style="color:#4400DD">|</span>stop<span style="color:#4400DD">|</span>restart}&quot;
+exit 1
+esac</pre></div><!--/notypo--></p><br /><a name="p-4282-18"></a><p class="auto" id="p-4282-18">
+4. Добавить команду на&nbsp;автозапуск диалап-радиуса при&nbsp;запуске сервера. Для&nbsp;этого откройте папку &#147;rc3.d&#148;<br />
+и&nbsp;проверьте наличие ссылки<!--notypo--> &quot;@S98dial.sh&quot;: <!--/notypo--></p><br />
+<div class="indent">cd /etc/rc3.d<br />
+ls&nbsp;-la</div>
+<br /><a name="p-4282-19"></a><p class="auto" id="p-4282-19">
+если такой ссылки нет, ее&nbsp;нужно создать, выполнив в&nbsp;этой папке следующую команду:</p><br />
+<div class="indent"><!--notypo-->ln -s /etc/init.d/dial.sh /etc/rc3.d/S98dial.sh<!--/notypo--></div>
+<br /><a name="p-4282-20"></a><p class="auto" id="p-4282-20">
+Результат должен быть следующего вида, пример:</p><br />
+<div class="indent"><!--notypo-->lrwxrwxrwx    1 root     root           22 May 16 14:03 S98billing.sh -&gt; /etc/init.d/billing.sh<!--/notypo--><br />
+<!--notypo-->lrwxrwxrwx    1 root     root           19 Jun 14 15:45 S98dial.sh -&gt; /etc/init.d/dial.sh<!--/notypo--></div>
+<br /><a name="p-4282-21"></a><p class="auto" id="p-4282-21">
+5. Запустить диалап-радиус:</p><br />
+<div class="indent">/etc/init.d/dial.sh start </div>
+<br /><a name="p-4282-22"></a><p class="auto" id="p-4282-22">
+Примечание: Для&nbsp;ручного запуска и&nbsp;остановки нужно использовать команды &#147;start&#148; и&nbsp;&#147;stop&#148; соответственно. </p><br /><a name="p-4282-23"></a><p class="auto" id="p-4282-23">
+6. Проверить, как&nbsp;запустился диалап-радиус, командой:</p><br />
+<div class="indent">ps ax&nbsp;| grep rad&nbsp;</div>
+<br /><a name="p-4282-24"></a><p class="auto" id="p-4282-24">
+Если у&nbsp;вас запущена система <!--notypo-->IP Studio AMBS<!--/notypo-->, используется карточная платформа и&nbsp;вы запустили диалап-радиус, вы&nbsp;увидите примерно следующую картину:</p><br />
+<div class="indent"><!--notypo-->17350 ?        S      3:00 /usr/local/billing/bin/radiusd -config_file /usr/local/billing/radius/auth.cfg -pid_file /usr/local/billing/radius/rad_auth.pid<!--/notypo--><br />
+<!--notypo-->17361 ?        S      3:06 /usr/local/billing/bin/radiusd -config_file /usr/local/billing/radius/acct.cfg -pid_file /usr/local/billing/radius/rad_acct.pid<!--/notypo--><br />
+<!--notypo-->17371 ?        S      2:05 /usr/local/billing/bin/rad_card -config_file /usr/local/billing/radius/card.cfg -pid_file /usr/local/billing/radius/rad_card.pid<!--/notypo--><br />
+<!--notypo-->17381 ?        S      2:15 /usr/local/billing/bin/rad_dial -config_file /usr/local/billing/radius/dial.cfg -pid_file /usr/local/billing/radius/rad_dial.pid<!--/notypo--><br />
+<!--notypo-->4491 pts/1    S      0:00 grep rad<!--/notypo--></div>
+<br /><a name="p-4282-25"></a><p class="auto" id="p-4282-25">
+Два&nbsp;процесса самой системы (auth.cfg, acct.cfg), один карточного модуля (card.cfg) и&nbsp;один диалап-модуля (dial.cfg).</p><br /><a name="p-4282-26"></a><p class="auto" id="p-4282-26">
+7. Нужно настроить оборудование, чтобы оно&nbsp;отправляло диапные звонки на&nbsp;порты диалап-радиуса системы.</p><br /><a name="p-4282-27"></a><p class="auto" id="p-4282-27">
+8. Теперь можно переходить к&nbsp;настройке самой системы. Для&nbsp;работы диалап-модуля в&nbsp;системе нужно завести любое направление с&nbsp;типом &ndash; &#147;dialup&#148;. Нужно заполнить только поля: &#147;Destination&#148; и&nbsp;&#147;Country code&#148;. Пример: &#147;Destination&#148; &ndash; &laquo;Диал-ап номер&raquo;, &#147;Country code&#148; &ndash; &#147;11111&#148;, тип&nbsp;&ndash; &#147;dialup&#148;.</p><br /><a name="p-4282-28"></a><p class="auto" id="p-4282-28">
+9. Создать лот&nbsp;для диалап-карточек. Или&nbsp;добавить диалап-карты  в&nbsp;любой другой лот. Добавляемые карты должны иметь тип&nbsp;&ndash; &#147;Dialup&#148; или&nbsp;<!--notypo--> &quot;VoIP+Dialup&quot; <!--/notypo-->, чтобы их&nbsp;пользователи смогли подключиться по&nbsp;диалапу. </p><br /><a name="p-4282-29"></a><p class="auto" id="p-4282-29">
+Примечание: Один лот&nbsp;может содержать и&nbsp;<!--notypo-->VoIP-карты<!--/notypo--> и&nbsp;<!--notypo-->Dialup-карты<!--/notypo-->. <br />
+Карта может иметь один из&nbsp;следующих типов: <!--notypo-->VoIP<!--/notypo-->, <!--notypo-->Dialup<!--/notypo-->, <!--notypo-->VoIP+Dialup<!--/notypo-->.</p><br /><a name="p-4282-30"></a><p class="auto" id="p-4282-30">
+10. Добавить созданное диал-апное направление (&laquo;11111&raquo;) в&nbsp;тарифный план карточного лота, куда были добавлены диалап-карты.</p><br /><a name="p-4282-31"></a><p class="auto" id="p-4282-31">
+11. Протестировать работу диал-ап модуля. </p><br /><a name="p-4282-32"></a><p class="auto" id="p-4282-32">
+Если тесты прошли успешно, модуль настроен правильно. </p><br /><a name="p-4282-33"></a><p class="auto" id="p-4282-33">
+Пример настроек для&nbsp;циски:</p><br /><a name="p-4282-34"></a><p class="auto" id="p-4282-34">
+<!--notypo--><div class="code"><pre>Cтрока из конфига циски:
+
+!
+aaa group server radius DIALRAD
+server-private XX.XX.XX.XX auth-port 1812 acct-port 1813
+retransmit 2 key 7 03XX5402XX0C20XX4A
+!
+
+key задаете таким же как и в dial.cfg 
+
+Обязательно должны быть строки:
+radius-server vsa send accounting
+radius-server vsa send authentication
+
+Пример настройки интерфейса:
+
+interface Group-Async0
+ ip unnumbered FastEthernet0
+ ip access-group DialUp-Users-in in
+ ip access-group DialUp-Users-out out
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+ encapsulation ppp
+ ip route-cache policy
+ ip route-cache flow
+ no ip mroute-cache
+ ip policy route-map DialUp
+ no logging event link-status
+ async mode dedicated
+ peer default ip address pool DialUp
+ compress mppc
+ ppp max-bad-auth 2
+ ppp authentication pap
+ group-range 1 240
+end</pre></div><!--/notypo--></p>   <script language="JavaScript" type="text/javascript">
+   var dbclick = "page";
+  </script>
+ <br style="clear:both" />&nbsp;
+</div>
+
+<form action="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch"  method="get" >
+<input type="hidden" name="wakka" value="TextSearch" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+	<tr>
+		<td>
+			 
+			
+			  <span class="searchbar nobr">Поиск: <input type="text" name="phrase" size="25" style="border: none; border-bottom: 1px solid #CCCCAA; padding: 0px; margin: 0px;" /></span>
+		</td>
+		<td align="right">
+			<a href="wakka2c95.html?wakka=DokumentacijaPoDialapModuljuIpstudioAmbs/print" target="_new"><img src="themes/default/icons/1print.gif" title="Версия для печати" alt="Версия для печати"  align="middle" border="0" /></a>		</td>
+	</tr>
+</table>
+
+</form>
+
+
+<table class="copyright" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="left" class="copyright">
+			Created by <a target="_blank" class="copyright" href="http://www.ipstudio.net/">IP Studio Inc.</a>© 2007
+		</td>
+		<td align="right" class="copyright">
+			Powered by <a href="http://wackowiki.com/WackoWiki" target="_blank" title="" class="outerlink">WackoWiki R4.2</a>		</td>
+	</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=DokumentacijaPoDialapModuljuIpstudioAmbs&v=qs1 by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:10:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

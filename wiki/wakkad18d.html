@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/MvtsVoprosy/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ЧастыеВопросыИответыПоАМБС/MvtsВопросы</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%D7%E0%F1%F2%FB%E5%C2%EE%EF%F0%EE%F1%FB%C8%EE%F2%E2%E5%F2%FB%CF%EE%C0%CC%C1%D1%2FMvts%C2%EE%EF%F0%EE%F1%FB">ЧастыеВопросыИответыПоАМБС/MvtsВопросы</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<a name="h231-1"></a><h1><!--notypo-->ЧаВО<!--/notypo--> по&nbsp;IP Studio AMBS</h1>
+<br />
+<strong> <a name=".." href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS&amp;v=17ko" class="" title="ЧастыеВопросыИответыПоАМБС/..">В оглавление</a> </strong><br />
+<ul><li> <a name="obshhajainformacijapoambs" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/ObshhajaInformacijaPoAMBS&amp;v=p20" class="" title="ЧастыеВопросыИответыПоАМБС/Общая&nbsp;Информация&nbsp;По&nbsp;AMBS">Общая информация по&nbsp;IP Studio AMBS</a>
+</li><li> <a name="voprosypoustanovkeambs" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/VoprosyPoustanovkeAMBS&amp;v=osy" class="" title="ЧастыеВопросыИответыПоАМБС/Вопросы&nbsp;Поустановке&nbsp;AMBS">Технические вопросы по&nbsp;системе</a>
+</li><li> <a name="rabotacoperatorami" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/RabotaCoperatorami&amp;v=16or" class="" title="ЧастыеВопросыИответыПоАМБС/Работа&nbsp;Cоператорами">Операторы и&nbsp;их параметры</a>
+</li><li> <a name="rabotastarifami" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/RabotaStarifami&amp;v=5yh" class="" title="ЧастыеВопросыИответыПоАМБС/Работа&nbsp;Старифами">Тарифные планы, валюты, цены и&nbsp;направления</a>
+</li><li> <a name="rabotasshljuzami" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/RabotaSshljuzami&amp;v=xe5" class="" title="ЧастыеВопросыИответыПоАМБС/Работа&nbsp;Сшлюзами">Радиус: шлюзы, маршрутизация, трансляция</a> 
+</li><li> <a name="mvtsvoprosy" href="http://78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/MvtsVoprosy&amp;v=61q" class="" title="ЧастыеВопросыИответыПоАМБС/Mvts&nbsp;Вопросы">MVTS: конфиги, обновление, статистика, sip-hit</a></li></ul>
+<a name="h231-2"></a><h2>MVTS: конфиги, обновление, статистика, sip-hit</h2>
+<br />
+<ul><li> <u><a href="#MVTSTT1" name="oMVTSTT1">Что должно быть в&nbsp;конфигах MVTS при&nbsp;добавлении ее&nbsp;в АМБС?</a></u>
+</li><li> <u><a href="#MVTSTT2" name="oMVTSTT2">Не обновляются конфигурационные файлы gateway.cfg и&nbsp;т.д.</a></u>
+</li><li> <u><a href="#MVTSTT3" name="oMVTSTT3">После подключения удаленной Меры, не&nbsp;показывается отчет об&nbsp;обновлении конфигов в&nbsp;&#147;Show Mera last reload status&#148;. </a></u>
+</li><li> <u><a href="#MVTSTT4" name="oMVTSTT4">Как подключить Sip-Hit?</a></u>
+</li><li> <u><a href="#MVTSTT5" name="oMVTSTT5">В АМБС не&nbsp;поступают данные по&nbsp;онлайн звонкам с&nbsp;Меры. Что&nbsp;делать?</a></u>
+</li><li> <u><a href="#MVTSTT6" name="oMVTSTT6">Обновленный файл gateway.cfg записывается в&nbsp;папку Меры, но&nbsp;при этом сама Мера не&nbsp;принимает изменения в&nbsp;работу автоматически, почему?</a></u></li></ul>
+ <br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="MVTSTT1" href="#MVTSTT1" title=""></a>
+<!--/notypo--><strong>Вопрос: Что&nbsp;должно быть в&nbsp;конфигах MVTS при&nbsp;добавлении ее&nbsp;в АМБС?</strong><br />
+<br />
+<strong>Ответ:</strong><br />
+<br />
+Для&nbsp;случая когда Мера используется в&nbsp;режиме &laquo;Маршрутизации&raquo;.<br />
+<br />
+На&nbsp;сервере АМБС, в&nbsp;&laquo;/usr/local/billing/radius/radius.cfg&raquo; проверьте следующие параметры:<br />
+<!--notypo--><div class="code"><pre>AuthPort 1812
+AcctPort 1813
+RoutePort 1814</pre></div><!--/notypo--><br />
+Номера портов должны соответствовать портам указанным для&nbsp;этой Меры в&nbsp;форме &#147;Equipments &ndash; MVTS Servers&#148;<br />
+Далее на&nbsp;сервере Меры, секция [Radius] в&nbsp;"<em>&lt;MVTS_dir&gt;</em>/cfg/meraproxy.cfg" должна выглядеть следующим образом(<em>пример</em>):<br />
+<!--notypo--><div class="code"><pre><strong style="color:#AA0000;background:#EEE0CC">[Radius]</strong>
+acct_type<span style="color:#4400DD">=</span>1
+acct_leg_type<span style="color:#4400DD">=</span>2
+secret<span style="color:#4400DD">=</span>&lt;пароль_амбс_радиуса&gt;
+auth_enable<span style="color:#4400DD">=</span>1
+auth_address<span style="color:#4400DD">=</span>&lt;адрес_амбс_сервера&gt;
+auth_port<span style="color:#4400DD">=</span>1812
+local_auth_port<span style="color:#4400DD">=</span>1645
+acct_enable<span style="color:#4400DD">=</span>1
+acct_address<span style="color:#4400DD">=</span>&lt;адрес_амбс_сервера&gt;
+acct_port<span style="color:#4400DD">=</span>1813
+local_acct_port<span style="color:#4400DD">=</span>1646
+route_enable<span style="color:#4400DD">=</span>1
+route_address<span style="color:#4400DD">=</span>&lt;адрес_амбс_сервера&gt;
+route_port<span style="color:#4400DD">=</span>1814
+local_route_port<span style="color:#4400DD">=</span>1647
+q931_h323_disconnect_cause<span style="color:#4400DD">=</span>1
+suppress_Q931_cause<span style="color:#4400DD">=</span>0
+repeat_time<span style="color:#4400DD">=</span>2
+repeat_quantity<span style="color:#4400DD">=</span>1</pre></div><!--/notypo--><br />
+Секция [Radius] дописывается автоматически <u>всегда в&nbsp;конец файла</u>, поэтому она&nbsp;должна быть всегда последней.<br />
+<!--notypo--><!--/notypo--><br />
+В&nbsp;файле "<em>&lt;MVTS_dir&gt;</em>/cfg/dialpeer.cfg":<br />
+<br />
+<!--notypo--><div class="code"><pre><strong style="color:#AA0000;background:#EEE0CC">[RADIUS_PEER]</strong>
+dst_pattern<span style="color:#4400DD">=</span>.*
+gateway<span style="color:#4400DD">=</span>EXTERNAL
+priority<span style="color:#4400DD">=</span>50000</pre></div><!--/notypo--><br />
+<br />
+больше в&nbsp;&#147;dialpeer.cfg&#148; ничего не&nbsp;должно быть, это&nbsp;гарантирует, что&nbsp;трафик идти будет только через АМБС.<br />
+<br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="MVTSTT2" href="#MVTSTT2" title=""></a>
+<!--/notypo--><strong>Проблема: Не&nbsp;обновляются конфигурационные файлы gateway.cfg и&nbsp;т.д.</strong><br />
+<br />
+<strong>Решение:</strong><br />
+<br />
+Как&nbsp;происходит обновление:<br />
+<br />
+1. Обновление конфигов работает, если мера работает в&nbsp;режиме &#147;Radius Enabled&#148;<br />
+2. После нажатия &#147;Update gateway.cfg&#148; на&nbsp;сервере АМБС формируются файлы конфигов MVTS в&nbsp;папке &laquo;/usr/local/billing/hosting/bill/result/&raquo;<br />
+3. После создания конфигов, апач передает файлы на&nbsp;MVTS в&nbsp;папку &laquo;/usr/local/billing/ftp/&raquo;<br />
+4. После передачи данных с&nbsp;АМБС приходит сигнал обновить файлы конфигов в&nbsp;папке MVTS и&nbsp;выполнить перезагрузку командой &#147;mp_shell.x reload conf -d&#148;<br />
+<br />
+Возможные ошибки: <br />
+<br />
+1) В&nbsp;разделе Equipments &ndash; MVTS Servers выбрать MVTS сервер и&nbsp;проверить поля &#147;Server IP&#148; и&nbsp;&#147;Radius IP&#148; на&nbsp;наличие лишних символов (пробел, табулятор и&nbsp;т.д.),<br />
+если такие присутствуют, убрать и&nbsp;сохранить изменения.<br />
+<br />
+2) Для&nbsp;работы с&nbsp;удаленной Мерой долны быть правильно прописаны rsa-ключи между серверами биллинга и&nbsp;Меры. <br />
+С&nbsp;АМБС должен быть прописан доступ &#147;ipstudio&#148; &ndash; &#147;ipstudio&#148; на&nbsp;MVTS (для обновления конфигов). <u><a name=".dokumentacijaipstudioambs.razdelequipments.formamvtsservers.instrukcijasftp" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelEquipments/FormaMvtsServers/InstrukcijaSftp&amp;v=lyc" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS&nbsp;/&nbsp;Раздел&nbsp;Equipments&nbsp;/&nbsp;Форма&nbsp;Mvts&nbsp;Servers&nbsp;/&nbsp;Инструкция&nbsp;Sftp">как сделать?</a></u><br />
+<br />
+3) Проверить &#147;iptables&#148; на&nbsp;сервере MVTS, чтобы не&nbsp;блокировался порт АМБС (по умолчанию &ndash; 2222).<br />
+<br />
+4)  Проверить каждую фазу процесса обновления отдельно:<br />
+<br />
+<ol type="1"><li> Проверить свободное место на&nbsp;AMBS в&nbsp;партиции установки и&nbsp;на MVTS в&nbsp;партициях MVTS и&nbsp;AMBS
+</li><li> Проверить параметр &#147;Enable radius&#148; у&nbsp;MVTS-сервера в&nbsp;форме &#147;MVTS Servers&#148;
+</li><li> Создать у&nbsp;любого оператора любой шлюз и&nbsp;проверить создание файла &#147;gateway.cfg&#148; в&nbsp;папке &laquo;billing/hosting/result/&raquo; на&nbsp;АМБС-сервере 
+</li><li> Проверить коннект без&nbsp;авторизации с&nbsp;АМБС на&nbsp;MVTS:
+<div class="indent">su &ndash; ipstudio; ssh&nbsp;ipstudio@адрес_меры<br />
+</div></li><li> Убить процесс &#147;bill_sig_svr.pl&#148; на&nbsp;MVTS и&nbsp;проверить файлы в&nbsp;папке &laquo;billing/ftp/ " (повторно запустить процесс обновление конфигов MVTSиз веб-а)
+</li><li> Если файлы не&nbsp;передались посмотреть error-лог апача на&nbsp;АМБС-сервере, узнать причину
+</li><li> Запустить &#147;bill_sig_svr.pl&#148; на&nbsp;MVTS, повторить процесс обновление конфигов, проверить папку &laquo;MVTS/cfg&#148; на&nbsp;обновление файлов (смотреть даты создания файлов), проверить права
+</li><li> В&nbsp;&laquo;billing/logs/ipstudio.log&raquo; на&nbsp;MVTS, проверить наличие  сигнала на&nbsp;перезапуск конфигов меры </li></ol>
+<br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="MVTSTT3" href="#MVTSTT3" title=""></a>
+<!--/notypo--><strong>Проблема: После подключения удаленной Меры, не&nbsp;показывается отчет об&nbsp;обновлении конфигов Меры в&nbsp;&#147;Show Mera last reload status&#148;.</strong><br />
+<br />
+<strong>Решение:</strong><br />
+<br />
+Нужно проверить следующий файл на&nbsp;Мере и&nbsp;на АМБС:<br />
+<br />
+<div class="indent">more /usr/local/billing/logs/err.log</div>
+<br />
+Если в&nbsp;логе присутствуют записи типа:<br />
+<br />
+<div class="indent">not connection<br />
+not&nbsp;connection<br />
+not&nbsp;connection</div>
+<br />
+Неправильно прописан ключ, если данное сообщение присутствует в&nbsp;логе на&nbsp;сервере с&nbsp;Мерой, значит Мера не&nbsp;может послать отчет об&nbsp;обновлении конфигов на&nbsp;АМБС. <br />
+Возможно в&nbsp;ключе присутствуют лишние знаки(пробелы) или&nbsp;ключ разорван на&nbsp;несколько строк (ключ должен записываться одной строкой). <br />
+Необходимо перепроверить и&nbsp;при необходимости перепрописать rsa-ключи между серверами.<br />
+<br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="MVTSTT4" href="#MVTSTT4" title=""></a>
+<!--/notypo--><strong>Вопрос: Как&nbsp;подключить Sip-Hit?</strong><br />
+<br />
+<strong>Ответ:</strong><br />
+<br />
+Прежде всего следует отметить факт, что&nbsp;Sip-Hit не&nbsp;управляется через AMBS, это&nbsp;отдельное приложение MVTS работающее на&nbsp;прямую с&nbsp;MVTS, об&nbsp;этом нужно помнить при&nbsp;настройке конвертера.<br />
+<br />
+Если MVTS работает под&nbsp;управлением AMBS, добавить шлюзы sip-клиентов на&nbsp;прямую в&nbsp;конфиг MVTS не&nbsp;получится, поскольку AMBS перезаписывает конфиг на&nbsp;основании информации о&nbsp;шлюзах клиентов из&nbsp;своей базы.<br />
+Поэтому для&nbsp;sip-клиентов работающих через конвертер(Sip-Hit) нужно завести соответствующих операторов и&nbsp;шлюзы в&nbsp;AMBS, чтобы система могла тарифицировать такие звонки и&nbsp;раскладывать их&nbsp;по операторам. При&nbsp;этом в&nbsp;конфиг MVTS добавятся правильные записи о&nbsp;шлюзах работающих через sip-конвертер.<br />
+<br />
+В&nbsp;AMBS шлюзы sip-клиентов следует заводить с&nbsp;учетом следующих правил:<br />
+<br />
+<ul><li> Только для&nbsp;приема трафика от&nbsp;клиента через Sip-Hit:
+<ol type="1"><li> Все&nbsp;параметры шлюза стандартные, адрес, маска и&nbsp;т.д. как&nbsp;у&nbsp;обычных шлюзов.
+</li><li> Порт нужно указывать тот&nbsp;на&nbsp;котором работает Sip-Hit (по умолчанию это&nbsp;&ndash; 5060).</li></ol></li></ul>
+<br />
+<ul><li> Для&nbsp;приема и&nbsp;отправки(или только отправки) трафика на&nbsp;sip-шлюз клиента:
+<ol type="1"><li> Все&nbsp;параметры шлюза стандартные, адрес, маска и&nbsp;т.д. как&nbsp;у&nbsp;обычных шлюзов.
+</li><li> Порт нужно указывать тот&nbsp;на&nbsp;котором работает Sip-Hit (по умолчанию это&nbsp;&ndash; 5060).
+</li><li> В&nbsp;поле &laquo;Дополнительно&raquo; (Additinal parameters) добавить строку<em>(пример)</em>: <em>converter=SIPconv</em>
+</li></ol><div class="indent">имя конвертера (можно посмотреть в&nbsp;meraproxy.cfg).</div></li></ul>
+<br />
+Обратите внимание, что&nbsp;случае работы с&nbsp;Sip-Hit AMBS выполняет пассивную роль, т.е. вы&nbsp;заводите операторов в&nbsp;амбс, только чтобы правильно видеть статистику по&nbsp;трафику и&nbsp;для автоматического добавления записей о&nbsp;sip-шлюзах в&nbsp;конфиг MVTS. Непосредственно управлять конвертером AMBS не&nbsp;может, конвертер это&nbsp;приложение MVTS.<br />
+В&nbsp;плане роутинга sip-трафика, роутинг будет проходить на&nbsp;MVTS, когда трафик попадет на&nbsp;MVTS он&nbsp;будет обработан по&nbsp;всем правилам маршрутизации заданным в&nbsp;AMBS.<br />
+<br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="MVTSTT5" href="#MVTSTT5" title=""></a>
+<!--/notypo--><strong>Вопрос: В&nbsp;АМБС не&nbsp;поступают данные по&nbsp;онлайн звонкам с&nbsp;Меры. Что&nbsp;делать?</strong><br />
+<br />
+<strong>Ответ:</strong><br />
+На&nbsp;MVTS-сервере:<br />
+<ul><li> Проверить свободное место в&nbsp;&laquo;/usr/local/billing/&raquo;
+</li><li> Сбросить (через kill -9)  и&nbsp;перезапустить демона АМБС &laquo;/usr/local/billing/bin/bill_sig_svr.pl&raquo;</li></ul>
+<br />
+<hr noshade="noshade" size="1" />
+<br />
+<!--notypo--><a name="MVTSTT6" href="#MVTSTT6" title=""></a>
+<!--/notypo--><strong>Вопрос: Обновленный файл gateway.cfg записывается в&nbsp;папку Меры, но&nbsp;при этом сама Мера не&nbsp;принимает изменения в&nbsp;работу автоматически, почему?</strong><br />
+<br />
+<strong>Ответ:</strong><br />
+Проверьте лог&nbsp;АМБС в&nbsp;который записывает результат последнего обращения к&nbsp;Мере &ndash; &laquo;billing/logs/mera.log&raquo;,<br />
+если Мера удаленная лог&nbsp;стоит искать на&nbsp;сервере Меры.<br />
+Проверьте, если в&nbsp;логе присутствуют ошибки процесса перезапуска Меры, типа:<br />
+<!--notypo--><div class="code"><pre><span style="color:#226622"># cat mera.log </span>
+Start
+Fri Sep 17 14:11:23 MSD 2010
+Update gatekeeper.cfg
+/usr/local/mvts/bin/mp_shell.x reload config -d
+Non-existent command
+#</pre></div><!--/notypo--><br />
+значит настройки сервера мешают выполнению команды от&nbsp;демона АМБС.<br />
+Демон выполняет команду на&nbsp;обновление конфигов Меры от&nbsp;пользователя, под&nbsp;которым он&nbsp;запущен (&laquo;ps aux&nbsp;| grep billi_sig_svr.pl&raquo;).<br />
+В&nbsp;приведенном выше примере, мешали настройки групп пользователей самой Меры(cекция [Console]):<br />
+<!--notypo--><div class="code"><pre><span style="color:#226622"># grep -ri &quot;gid&quot; mvts/cfg/meraproxy.cfg  </span>
+admin_gid<span style="color:#4400DD">=</span>503
+billing_gid<span style="color:#4400DD">=</span>504
+support_gid<span style="color:#4400DD">=</span>504
+#</pre></div><!--/notypo--><br />
+для&nbsp;примера, если полностью сбросить эти&nbsp;группы и&nbsp;руками обновить рабочие конфиги:<br />
+<!--notypo--><div class="code"><pre><span style="color:#226622"># grep -ri &quot;gid&quot; mvts/cfg/meraproxy.cfg  </span>
+admin_gid<span style="color:#4400DD">=</span>0
+billing_gid<span style="color:#4400DD">=</span>0
+support_gid<span style="color:#4400DD">=</span>0
+<span style="color:#226622"># mvts/bin/mp_shell.x re co -d</span></pre></div><!--/notypo--><br />
+АМБС уже&nbsp;сможет автоматически выполнять команду на&nbsp;обновление рабочих конфигов Меры:<br />
+<!--notypo--><div class="code"><pre><span style="color:#226622"># cat mera.log                      </span>
+Start
+Fri Sep 17 14:12:19 MSD 2010
+Update gatekeeper.cfg
+/usr/local/mvts/bin/mp_shell.x reload config -d
+
+Loading /usr/local/mvts/./cfg/meraproxy.cfg...
+Loading gatekeepers...
+Loading RAS users...
+Loading gateways...
+Loading dialpeers...
+Reloading successful</pre></div><!--/notypo--><br />
+<hr noshade="noshade" size="1" /></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=ChastyeVoprosyIotvetyPoAMBS/MvtsVoprosy/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

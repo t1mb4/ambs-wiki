@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/BackupAMBS/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ПримерыРаботыСipStudioAmbs/BackupAMBS</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%CF%F0%E8%EC%E5%F0%FB%D0%E0%E1%EE%F2%FB%D1ipStudioAmbs%2FBackupAMBS">ПримерыРаботыСipStudioAmbs/BackupAMBS</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<strong> <a name=".." href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong><br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><a name="h226-1"></a><h2>Архивирование старых данных в&nbsp;IP Studio AMBS</h2>
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+Начиная с&nbsp;версии АМБС 4.0 (build 2.0) в&nbsp;систему добавлен  скрипт позволяющий производить резервное копирование и&nbsp;отчистку старых данных по&nbsp;звонкам из&nbsp;<!--notypo-->MySql<!--/notypo-->-базы.<br />
+<br />
+Скрипт расположен в&nbsp;директории &laquo;billing/bin&raquo;, по&nbsp;умолчанию: <br />
+<!--notypo-->/usr/local/billing/bin/arch_cdr.pl<!--/notypo--><br />
+<br />
+Параметры запуска: <br />
+<table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Ключ</strong></td><td  class="usercell"><strong>Описание</strong></td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">--date</td><td  class="usercell">Дата в&nbsp;формате 'YYYY-MM-DD', все&nbsp;данные о&nbsp;звонках до&nbsp;этой даты будут включены в&nbsp;резервную копию. Ограничение по&nbsp;дате составляет четыре месяца от&nbsp;текущей даты.<br />
+</td></tr>
+<tr class="userrow"><td class="usercell">--delete</td><td  class="usercell">Данные вошедшие в&nbsp;резервную копию будут удалены из&nbsp;базы.<br />
+</td></tr>
+<tr class="userrow"><td class="usercell">--path</td><td  class="usercell">Задать путь, куда сохранять файлы резервной копии, по&nbsp;умолчанию путь '$PREFIX/backup/' из&nbsp;файла bill_util.cfg (т.е. /usr/local/billing/backup/)<br />
+Путь должен заканчиваться знаком &laquo;/&raquo;. <br />
+</td></tr>
+<tr class="userrow"><td class="usercell">--help</td><td  class="usercell">Выводит на&nbsp;экран справку по&nbsp;параметрам запуска.<br />
+</td></tr>
+</table>
+<br />
+Пример использования: <br />
+<!--notypo-->./arch_cdr.pl --date=2008-01-01 --delete --path=/backup/<!--/notypo--><br />
+<br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Примечание:</strong></td><td  class="usercell"> Рекомендуется запускать скрипт из&nbsp;под пользователя 'ipstudio'. <br />
+Если резервирование будет производиться в&nbsp;несуществующую директорию из&nbsp;под пользователя 'root', эта&nbsp;директория будет создана с&nbsp;правами 'root'. <br />
+В&nbsp;этом случае <!--notypo-->MySql<!--/notypo--> работающий из&nbsp;под пользователя 'ipstudio' не&nbsp;сможет создать в&nbsp;этой директории файлы резервных копий данных.</td></tr>
+</table></div></div> <br />
+<br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong><br /></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/BackupAMBS/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,175 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=RekomendaciiPoBezopastnostiServerovAMBS&v=9fl by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:10:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>
+  	IpstudioWiki : Рекомендации&nbsp;По&nbsp;Безопастности&nbsp;Серверов&nbsp;AMBS  </title>
+			  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <link rel="stylesheet" type="text/css" href="themes/default/css/wakka.css" />
+  <link rel="shortcut icon" href="themes/default/icons/wacko.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" title="RecentChanges in RSS" href="xml/recentchanges_ipstudiowiki.xml" />
+  <link rel="alternate" type="application/rss+xml" title="History/revisions of РекомендацииПоБезопастностиСерверовAMBS in RSS" href="wakka7f31.php?wakka=RekomendaciiPoBezopastnostiServerovAMBS/revisions.xml" />
+
+<script language="JavaScript" type="text/javascript" src="js/default.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/protoedit.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/wikiedit2.js"></script>
+
+</head>
+
+<body onload="all_init();" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0">
+
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+<form action="http://78.46.73.113/wiki/wakka.php?wakka=Login"  method="post" >
+<input type="hidden" name="wakka" value="Login" />
+<input type="hidden" name="action" value="login" />
+<div class="header">
+  <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  	<tr>
+  		<td align="left" class="logo_header">
+  		
+  		</td>
+  		<td align="right" valign="top" class="logo_header"> 
+								<span>
+					<a href="wakka6b42.html?wakka=Login">
+						<b>Вход</b>
+					</a>
+				</span>
+				<!-- <span class="nobr"><input type="hidden" name="goback" value="RekomendaciiPoBezopastnostiServerovAMBS" 
+				/><strong>Вход:&nbsp;</strong><input 
+				type="text" name="name" size="18" class="login" />&nbsp;Пароль:&nbsp;<input type="password" name="password"  
+				class="login" size="8" />&nbsp;<input type="image" 
+				src="http://78.46.73.113/wiki/themes/default/icons/login.gif" alt=">>>" align="top" /></span>-->
+							</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="bookmarks">
+							</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="logo_header">
+				<b>
+				<!--     <span class="main">IpstudioWiki:</span> -->
+				     <span class="main"><a href="wakkad0e2.html?wakka=KnowledgeBase">Knowledge&nbsp;Base</a></span>
+								     <span class="main">:: РекомендацииПоБезопастностиСерверовAMBS</span>     
+								</b>
+				<!--     <span class="main"><a class="Search" title="" 
+				     href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch&amp;phrase=%D0%E5%EA%EE%EC%E5%ED%E4%E0%F6%E8%E8%CF%EE%C1%E5%E7%EE%EF%E0%F1%F2%ED%EE%F1%F2%E8%D1%E5%F0%E2%E5%F0%EE%E2AMBS">...</a></span> -->
+				</td>
+			</tr>
+		</table>
+</form>
+
+<div class="pageBefore">
+	<img src="images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" />
+</div><div class="page">
+<a name="p18084-1"></a><p class="auto" id="p18084-1"><strong> <a name=".knowledgebase" href="wakkac109.html?wakka=KnowledgeBase&amp;v=mpj" class="" title="Knowledge&nbsp;Base">В оглавление</a> </strong></p><a name="h51-1"></a><h2>Рекомендации по&nbsp;безопасности серверов IP&nbsp;Studio AMBS</h2>
+<br /><a name="p18084-2"></a><p class="auto" id="p18084-2">
+1. Закройте доступ к&nbsp;<!--notypo-->MySql<!--/notypo--> из&nbsp;вне, оставьте только доступ с&nbsp;ваших ip-адресов: АМБС, удаленных мер&nbsp;и&nbsp;ваших рабочих, если вы&nbsp;непосредственно работаете с&nbsp;базой. <br />
+Для&nbsp;этого нужно консоль mysql выполнить следующие команды:</p><br />
+<div class="indent">/usr/local/billing/mysql/bin/mysql<br />
+use&nbsp;mysql;<br />
+delete from user where Host='%';<br />
+<!--notypo-->GRANT ALL PRIVILEGES ON voip.* to voip@<!--/notypo--><u><em>&lt;your_ip_address&gt;</em></u> <!--notypo--> identified by '<!--/notypo--><u><em>&lt;your_password&gt;</em></u>';</div>
+<br />
+<div class="indent">где: <br />
+<u><em>&lt;your_ip_address&gt;</em></u> &ndash; на&nbsp;ваш ip-адрес (например самого сервера АМБС или&nbsp;удаленной меры).<br />
+<u><em>&lt;your_password&gt;</em></u> &ndash; на&nbsp;ваш новый пароль.</div>
+<br />
+<div class="indent">Например:  </div>
+<br />
+<div class="indent">GRANT ALL&nbsp;PRIVILEGES ON&nbsp;voip.* to&nbsp;voip@192.168.1.1 identified by&nbsp;'djbg123';</div>
+<br />
+<ul><li> Если необходимо организовать доступ с&nbsp;нескольких ip-адресов, дайте несколько команд &ndash; GRANT с&nbsp;соответствующими ip-адресами.</li></ul>
+<br />
+<ul><li> Дайте право пользователю &#147;voip&#148; создавать файлы. Например:  </li></ul>
+<br />
+<div class="indent"><!--notypo-->GRANT FILE ON *.* TO voip@<!--/notypo--><u><em>&lt;ambs_ip_address&gt;</em></u><!--notypo--> identified by 'djbg123'<!--/notypo-->;</div>
+<br />
+<div class="indent">где:<br />
+<u><em>&lt;ambs_ip_address&gt;</em></u> &ndash; ip-адрес АМБС сервера.</div>
+<br /><a name="p18084-3"></a><p class="auto" id="p18084-3">
+<!--notypo--><!--/notypo--></p><ul><li> Дайте права пользователю voip, чтобы он&nbsp;мог устанавливать триггеры на&nbsp;своей базе: </li></ul>
+<br /><a name="p18084-4"></a><p class="auto" id="p18084-4">
+<!--notypo--><!--/notypo--></p><div class="indent"><!--notypo-->grant SUPER on *.* to voip@localhost;<!--/notypo--><br />
+<!--notypo-->grant SUPER on *.* to voip@<!--/notypo--><u><em>&lt;ambs_ip_address&gt;</em></u>;</div>
+<br /><a name="p18084-5"></a><p class="auto" id="p18084-5">
+<!--notypo--><!--/notypo--></p><div class="indent">где: <br />
+<u><em>&lt;ambs_ip_address&gt;</em></u> &ndash; ip-адрес АМБС сервера.</div>
+<br /><a name="p18084-6"></a><p class="auto" id="p18084-6">
+<!--notypo--><!--/notypo--></p><ul><li> В&nbsp;заключении, обновите привилегии, чтобы они&nbsp;вступили в&nbsp;работу:</li></ul>
+<br />
+<div class="indent">flush privileges;</div>
+<br /><a name="p18084-7"></a><p class="auto" id="p18084-7">
+<u><strong>Примечания</strong>:</u> </p><ul><li> установленный ваш&nbsp;новый пароль должен совпадать с&nbsp;«your_password» паролем указанным в&nbsp;конфигурационных файлах системы. 
+</li></ul><div class="indent">По умолчанию в&nbsp;системе, для&nbsp;доступа к&nbsp;базе используется пароль: <em>your_password</em> &ndash; djbg123 </div>
+<br />
+<div class="indent">Если вы&nbsp;решите заменить его, не&nbsp;забудьте изменить его&nbsp;в&nbsp;следующих конфигурационных файлах:</div>
+<br />
+<div class="indent">/usr/local/billing/etc/bill_util.cfg<br />
+/usr/local/billing/hosting/bill/.htaccess<br />
+/usr/local/billing/hosting/admin/.htaccess<br />
+/usr/local/billing/radius/radius.cfg<br />
+/usr/local/billing/radius/card.cfg <em>(опционально, для&nbsp;пользователей карточного модуля)</em><br />
+/usr/local/billing/radius/dial.cfg <em>(опционально, для&nbsp;пользователей диал-ап модуля)</em></div>
+<br /><a name="p18084-8"></a><p class="auto" id="p18084-8">
+2. Смените пароль для&nbsp;системного пользователя IP&nbsp;Studio AMBS – &#147;ipstudio&#148;. В&nbsp;консоли сервера выполните команду: </p><br />
+<div class="indent">passwd ipstudio</div>
+<br />
+<div class="indent">и введите ваш&nbsp;новый пароль. </div>
+<br /><a name="p18084-9"></a><p class="auto" id="p18084-9">
+3. Смените пароль для&nbsp;пользователя  “admin”  в&nbsp;системе IP&nbsp;Studio AMBS, предварительно заведя нового пользователя в&nbsp;группе “Admins”. <br />
+В&nbsp;случае, если вы&nbsp;ошибетесь при&nbsp;смене пароля, у&nbsp;вас будет возможность поправить это. </p><br /><a name="p18084-10"></a><p class="auto" id="p18084-10">
+4. Будьте внимательны  при&nbsp;смене паролей, если после смены паролей у&nbsp;вас возникнут проблемы, свяжитесь с&nbsp;разработчиками.</p><br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Примечание:</strong></td><td  class="usercell"> На&nbsp;АМБС-сервере у&nbsp;пользователя root должен быть доступ в&nbsp;mysql без&nbsp;пароля (update.pl выполняется из&nbsp;под root-а по&nbsp;техническим соображениям). <br />
+АМБС выполняет обновление своих скриптов и&nbsp;базы под&nbsp;этим пользователем, если root не&nbsp;будет иметь доступа в&nbsp;mysql или&nbsp;нужно будет вводить для&nbsp;него пароль, АМБС не&nbsp;сможет обновить свою базу.</td></tr>
+</table></div></div> <br /><a name="p18084-11"></a><p class="auto" id="p18084-11">
+<strong> <a  href="wakkac109.html?wakka=KnowledgeBase&amp;v=mpj" class="" title="Knowledge&nbsp;Base">В оглавление</a> </strong></p><br />   <script language="JavaScript" type="text/javascript">
+   var dbclick = "page";
+  </script>
+ <br style="clear:both" />&nbsp;
+</div>
+
+<form action="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch"  method="get" >
+<input type="hidden" name="wakka" value="TextSearch" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+	<tr>
+		<td>
+			 
+			
+			  <span class="searchbar nobr">Поиск: <input type="text" name="phrase" size="25" style="border: none; border-bottom: 1px solid #CCCCAA; padding: 0px; margin: 0px;" /></span>
+		</td>
+		<td align="right">
+			<a href="wakka6ab4.html?wakka=RekomendaciiPoBezopastnostiServerovAMBS/print" target="_new"><img src="themes/default/icons/1print.gif" title="Версия для печати" alt="Версия для печати"  align="middle" border="0" /></a>		</td>
+	</tr>
+</table>
+
+</form>
+
+
+<table class="copyright" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="left" class="copyright">
+			Created by <a target="_blank" class="copyright" href="http://www.ipstudio.net/">IP Studio Inc.</a>© 2007
+		</td>
+		<td align="right" class="copyright">
+			Powered by <a href="http://wackowiki.com/WackoWiki" target="_blank" title="" class="outerlink">WackoWiki R4.2</a>		</td>
+	</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=RekomendaciiPoBezopastnostiServerovAMBS&v=9fl by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:10:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

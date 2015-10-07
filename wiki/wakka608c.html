@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/NetarifikacijaZvonka/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ПримерыРаботыСipStudioAmbs/НетарификацияЗвонка</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%CF%F0%E8%EC%E5%F0%FB%D0%E0%E1%EE%F2%FB%D1ipStudioAmbs%2F%CD%E5%F2%E0%F0%E8%F4%E8%EA%E0%F6%E8%FF%C7%E2%EE%ED%EA%E0">ПримерыРаботыСipStudioAmbs/НетарификацияЗвонка</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<strong> <a name=".." href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong><br />
+<a name="h228-1"></a><h2>Не тарификация звонков</h2>
+<br />
+В&nbsp;процессе работы с&nbsp;системой могут встречаться такие ситуации, когда рабочие данные меняют задним числом (удаляют шлюз или&nbsp;тарифный код), <br />
+в&nbsp;этом случае в&nbsp;конце месяца прошедшие звонки для&nbsp;которых были удалены данные могут показываться как&nbsp;&laquo;не тарифицированные&raquo; звонки.<br />
+<br />
+Есть несколько признака, по&nbsp;которым можно определить, что&nbsp;в&nbsp;системе есть не&nbsp;тарифицированные звонки: <br />
+<br />
+<ol type="1"><li value="1"> При&nbsp;составлении инвойса, в&nbsp;нем присутствуют направления со&nbsp;следующими признаками:
+<ul><li> Направления, у&nbsp;которых перед названием направления стоит символ “_”(подчеркивание) 
+</li><li> Направления, названия которых состоят только из&nbsp;символа подчеркивания, но&nbsp;по которым прошли минуты.
+</li><li> Направления, без&nbsp;названия, но&nbsp;по которым прошли минуты.</li></ul></li></ol>
+<br />
+<ol type="1"><li value="2"> В&nbsp;таблице суммарной статистики в&nbsp;разделе “Call details”, параметры “not calculated minutes (term)” и&nbsp;“not calculated minutes (orig)” имеют значение отличное от&nbsp;нуля. </li></ol>
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/ambs_uncalc_1.gif" alt=" (11&nbsp;Кб)" title=" (11&nbsp;Кб)" width='243' height='183' /></div><br />
+<br />
+<ol type="1"><li value="3"> В&nbsp;сводной статистике присутствует статистика по&nbsp;оператору &#147;Any&#148; (не определенный).</li></ol>
+<br />
+При&nbsp;детальном (show: details) рассмотрении таких звонков в&nbsp;форме “Call details” нужно выбрать режим &#147;show: uncalculated calls&#148;. <br />
+Звонки для&nbsp;которых отсутствует какой-то из&nbsp;ключевых параметров работы  будут иметь цену “-1”, т.е. на&nbsp;данный момент системе не&nbsp;удается <br />
+найти шлюз(меру) или&nbsp;цену в&nbsp;тарифе оператора на&nbsp;эти звонки по&nbsp;которой они&nbsp;проходили ранее.<br />
+<br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Замечание:</strong></td><td  class="usercell"> Исключение составляют звонки с&nbsp;нулевой продолжительностью разговора. Звонки с&nbsp;нулевой длительностью не&nbsp;рассматриваются в&nbsp;процессе тарификации.</td></tr>
+</table></div></div> <br />
+<br />
+Не&nbsp;тарификация звонков может произойти по&nbsp;следующим причинам:<br />
+<br />
+<ol type="2"><li value="1"> Во&nbsp;время прохождения звонков в&nbsp;тарифном плане операторов присутствовала цена на&nbsp;это направление, после этого произошло одно из&nbsp;следующих событий:
+<ul><li> был&nbsp;изменен код&nbsp;направления в&nbsp;тарифном плане оператора и&nbsp;теперь система не&nbsp;может протарифицировать прошедшие звонки;
+</li><li> изменили даты работы кода направления таким образом, что&nbsp;прошедшие звоноки не&nbsp;попадают в&nbsp;период работы этого нового кода;
+</li><li> направление полностью удалили из&nbsp;тарифного плана оператора. </li></ul></li></ol>
+<br />
+<ol type="2"><li value="2"> Во&nbsp;время прохождения звонков, у&nbsp;оператора был&nbsp;закреплен один тарифный план, в&nbsp;котором присутствовали данные направления. Позже тарифный план оператора заменили на&nbsp;новый, в&nbsp;котором данное направление отсутствует.</li></ol>
+<br />
+<ol type="2"><li value="3"> После прохождения звонков, был&nbsp;изменен ip-адрес шлюза оператора, без&nbsp;сохранения старого адреса в&nbsp;истории работы, что&nbsp;привело к&nbsp;потере связи между звонками и&nbsp;шлюзами оператора.</li></ol>
+<br />
+<ol type="2"><li value="4"> У&nbsp;оператора присутствовало несколько сайтов. Звонки прошли по&nbsp;одному сайту, который в&nbsp;последствии был&nbsp;удален. Также возможна ситуация, когда звонки прошли с&nbsp;одним префиксом, который в&nbsp;последствии был&nbsp;заменен на&nbsp;другой.    </li></ol>
+<br />
+<ol type="2"><li value="5"> Звонки прошли через меру,которую в&nbsp;дальнейшем удалили из&nbsp;системы, что&nbsp;привело к&nbsp;потере связи звонков и&nbsp;шлюзов операторов. </li></ol>
+<br />
+В&nbsp;результате выше описанных причин при&nbsp;очередном пересчете статистики в&nbsp;системе появятся такие &laquo;не тарифицированные&raquo; звонки. <br />
+<br />
+Чтобы разрешить данную проблему, нужно выполнить следующие проверки:<br />
+<br />
+<ul><li> Детально посмотреть на&nbsp;&laquo;не тарифицированные&raquo; звонки в&nbsp;форме &#147;Call Details&#148;. Выбрать один такой звонок и&nbsp;разобраться в&nbsp;причине не&nbsp;тарификации.</li></ul>
+<br />
+<ul><li> Проверить тарифный план оператора в&nbsp;разделе &#147;Edit Tariffs&#148;, используя параметр “history”. Убедится, что&nbsp;в&nbsp;момент прохождения звонков у&nbsp;этого оператора в&nbsp;тарифном плане присутствовал тариф на&nbsp;это направление с&nbsp;правильной ценой.</li></ul>
+<br />
+<ul><li> Проверить адреса шлюзов операторов, по&nbsp;которым прошли звонки. Нужно убедиться, что&nbsp;адреса были активны и&nbsp;назначены правильным операторам в&nbsp;момент прохождения звонка.</li></ul>
+<br />
+<ul><li> Если система определила адрес шлюза, но&nbsp;название оператора указано как&nbsp;“Any”, значит звонки прошли, но&nbsp;теперь система не&nbsp;может связать адрес с&nbsp;конкретным оператором. В&nbsp;этом случае нужно найти, кому принадлежал этот адрес в&nbsp;период прохождения звонков и&nbsp;убедится что&nbsp;в&nbsp;то время он&nbsp;принадлежал правильному оператору. 
+</li></ul><div class="indent">Для этого можно воспользоваться разделом “Operator reports”. Если позже этот же&nbsp;адрес будет использоваться другим оператором, нужно закрыть адрес у&nbsp;старого оператора &laquo;Стоп датой&raquo; и&nbsp;завести у&nbsp;нового оператора со&nbsp;&laquo;Старт датой&raquo; позже указанной &laquo;Стоп даты&raquo;, чтобы две&nbsp;записи одного шлюза не&nbsp;пересекались.</div>
+<br />
+<ul><li> Проверить трансляции номера, с&nbsp;какими он&nbsp;пришел и&nbsp;с каками ушел. Убедится, что&nbsp;трансляции обработаны правильно.</li></ul>
+<br />
+Когда причина не&nbsp;тарифицированных звонков будет найдена и&nbsp;устранена, нужно провести процесс перетарификации звонков за&nbsp;период их&nbsp;прохождения. Для&nbsp;этого в&nbsp;разделе &#147;Recalculation&#148; (Reports &ndash; Recalculation) нужно выбрать оператора, указать период перетарификации и&nbsp;нажать кнопку “Recharge calls” для&nbsp;запуска процесса перетарификации звонков по&nbsp;выбранному оператору. <br />
+<br />
+После запуска процесса, можно просматривать его&nbsp;ход клавишами “Show recharge process” и&nbsp;“Show recalc process” (процесс включает в&nbsp;себя два&nbsp;процесса: перетарификацию и&nbsp;пересчет статистики). <br />
+<br />
+Нужно дождаться завершения обоих процессов (пока не&nbsp;выдаст надпись &ndash; FINISHED) и&nbsp;проверить результат в&nbsp;разделе &#147;Call Details&#148;. Если вы&nbsp;все сделали верно, не&nbsp;тарифицированные  звонки будут пересчитаны и&nbsp;показаны как&nbsp;нормальные. Если не&nbsp;тарифицированные звонки остались, значит одна из&nbsp;причин не&nbsp;тарификации не&nbsp;была устранена. <br />
+<br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong><br /></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/NetarifikacijaZvonka/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

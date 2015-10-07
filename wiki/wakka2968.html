@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelPayments/FormaEditPayments/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:15:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ДокументацияIPStudioAMBS/РазделPayments/ФормаEditPayments</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%C4%EE%EA%F3%EC%E5%ED%F2%E0%F6%E8%FFIPStudioAMBS%2F%D0%E0%E7%E4%E5%EBPayments%2F%D4%EE%F0%EC%E0EditPayments">ДокументацияIPStudioAMBS/РазделPayments/ФормаEditPayments</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<!--notypo--><a name="PageTopLink" href="#PageTopLink" title=""></a>
+<!--/notypo--><a name="h146-1"></a><h1>Раздел Payments. Оплаты и&nbsp;баланс операторов</h1>
+<br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS&amp;v=oq3" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS">В оглавление</a> </strong><br />
+<ul><li> <a href="#ФормаEditPayments" name="oФормаEditPayments">Форма &#147;Edit Payments&#148;</a>
+</li><li> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelPayments/FormaDealerSales&amp;v=ctt" class="" title="ДокументацияIPStudioAMBS/РазделPayments/Форма&nbsp;Dealer&nbsp;Sales">Форма &#147;Dealer Sales&#148;</a></li></ul>
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><a name="ФормаEditPayments" href="#ФормаEditPayments" title=""></a>
+<!--/notypo--><a name="h146-2"></a><h2>Форма &#147;Edit Payments&#148;</h2>
+<br />
+Форма для&nbsp;ведения баланса и&nbsp;финансовых операций с&nbsp;операторами. Вид&nbsp;формы показан на&nbsp;следующем рисунке: <br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/ambs_pay_form.gif" alt=" (2&nbsp;Кб)" title=" (2&nbsp;Кб)" width='530' height='55' /></div><br />
+<br />
+Чтобы посмотреть отчет по&nbsp;денежным движениям с&nbsp;оператором, достаточно выбрать этого оператора в&nbsp;выпадающем списке “Select operator”, если оператора не&nbsp;выбирать будет показана сводная статистика по&nbsp;всем операторам:<br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/ambs_pay_view.gif" alt=" (10&nbsp;Кб)" title=" (10&nbsp;Кб)" width='901' height='202' /></div><br />
+<br />
+Когда у&nbsp;оператора остается меньше 5% от&nbsp;доступного ему&nbsp;кредита, оператор подсвечивается желтым цветом (если у&nbsp;оператора установлен кредит).<br />
+Красным цветом выделяются операторы у&nbsp;которых кредит закончился. При&nbsp;окончании кредита система отправит уведомление менеджеру, который ведет оператора. <br />
+<em>Для отправки писем АМБС должна быть подключена к&nbsp;почтовому серверу, в&nbsp;конфигурации должны быть правильно заполнены параметры внешнего почтового сервера.</em><br />
+Названия операторов показаны в&nbsp;виде ссылок, нажав на&nbsp;которые можно посмотреть детали баланса оператора. <br />
+Будет показан баланс выбранного оператора и&nbsp;несколько последних финансовых операций с&nbsp;этим оператором. <br />
+<br />
+<div style="float:center; text-align:center"><img src="http://78.46.73.113/wiki/files/ambs_operpays_select.gif" alt=" (11&nbsp;Кб)" title=" (11&nbsp;Кб)" width='797' height='291' /></div><br />
+<br />
+Если в&nbsp;балансе наблюдаются ошибки или&nbsp;неточности, можно запустить процесс перерасчета баланса, нажав кнопку “Recharge balance”.<br />
+Проверить запущены ли&nbsp;сейчас в&nbsp;системе другие процессы перерасчета балансов, можно кнопкой “Show running process”.<br />
+<br />
+В&nbsp;отчете по&nbsp;оператору присутствуют следующие поля: <br />
+<br />
+<table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Поле</strong></td><td  class="usercell"><strong>Назначение</strong></td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell"><strong>Pay date</strong></td><td  class="usercell">Фактическая дата, когда платеж был&nbsp;совершен.<br />
+<!--notypo--><!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><strong>Pay de&nbsp;facto</strong></td><td  class="usercell">Сумма и&nbsp;валюта платежа.<br />
+<!--notypo--><!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><strong>Exchange rate</strong></td><td  class="usercell">Курс перерасчета платежа относительно валюты системы.<br />
+Ставки валют можно посмотреть в&nbsp;секции &#147;Exchange rates&#148;.<br />
+Перерасчет ведется всегда по&nbsp;курсу на&nbsp;начало текущего дня.<br />
+Для&nbsp;указания курса отличного от&nbsp;текущего, нужно включить параметр &#147;Manual&#148;.<br />
+<!--notypo--><!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><strong>Add to&nbsp;balance</strong></td><td  class="usercell">Сумма, на&nbsp;которую нужно изменить баланс оператора в&nbsp;системе.<br />
+<!--notypo--><!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><strong>Pay type</strong></td><td  class="usercell">Тип платежа (платеж от&nbsp;клиента или&nbsp;клиенту).<br />
+<!--notypo--><!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><strong>Comments</strong></td><td  class="usercell">Поле для&nbsp;комментариев к&nbsp;текущей оплате.<br />
+<!--notypo--><!--/notypo--><br />
+</td></tr>
+</table>
+<br />
+В&nbsp;форме для&nbsp;новых платежей присутствуют следующие кнопки управления: <br />
+<br />
+<table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Кнопка</strong></td><td  class="usercell"><strong>Назначение</strong></td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell"><strong><img src="http://78.46.73.113/wiki/files/ambs_bt_payadd.gif" alt=" (1&nbsp;Кб)" title=" (1&nbsp;Кб)" width='26' height='26' /></strong></td><td  class="usercell">Добавляет новую платежную запись.<br />
+<!--notypo--><!--/notypo--><br />
+</td></tr>
+<tr class="userrow"><td class="usercell"><img src="http://78.46.73.113/wiki/files/ambs_bt_addcomm.gif" alt=" (1&nbsp;Кб)" title=" (1&nbsp;Кб)" width='26' height='26' /></td><td  class="usercell">Добавляет комментарий к&nbsp;уже существующему платежу, выбранному в&nbsp;списке.<br />
+<!--notypo--><!--/notypo--><br />
+</td></tr>
+</table>
+<br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Примечание:</strong></td><td  class="usercell"> Добавленные платежи удалять нельзя. Если в&nbsp;операции была допущена ошибка, нужно добавить еще&nbsp;один платеж с&nbsp;минусом (чтобы выровнять баланс) и&nbsp;комментарием об&nbsp;ошибке. После этого можно добавить правильный платеж.</td></tr>
+</table></div></div> <br />
+<br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong><a name=".dokumentacijaipstudioambs" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS&amp;v=oq3" class="" title="Документация&nbsp;IP&nbsp;Studio&nbsp;AMBS">&lt;&lt; Назад</a></strong></td><td class="usercell"> <strong><a href="#PageTopLink" name="oPageTopLink">< Наверх ></a></strong></td><td  class="usercell"><strong><a name="formadealersales" href="http://78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelPayments/FormaDealerSales&amp;v=ctt" class="" title="ДокументацияIPStudioAMBS/РазделPayments/Форма&nbsp;Dealer&nbsp;Sales">Вперед &gt;&gt;</a></strong></td></tr>
+</table></div></div><br /></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=DokumentacijaIPStudioAMBS/RazdelPayments/FormaEditPayments/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:15:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

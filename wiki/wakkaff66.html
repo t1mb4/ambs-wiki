@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/PodgruzkaCDR/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ПримерыРаботыСipStudioAmbs/ПодгрузкаCDR</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%CF%F0%E8%EC%E5%F0%FB%D0%E0%E1%EE%F2%FB%D1ipStudioAmbs%2F%CF%EE%E4%E3%F0%F3%E7%EA%E0CDR">ПримерыРаботыСipStudioAmbs/ПодгрузкаCDR</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<strong> <a name=".." href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong><br />
+<a name="h100-1"></a><h2>Загрузка CDR-ов в&nbsp;ручном режиме</h2>
+<br />
+Для&nbsp;того, чтобы подгрузить звонки из&nbsp;CDR-ов Меры, за&nbsp;прошедший период нужно выполнить следующие действия:<br />
+<br />
+1. Убедиться, что&nbsp;CDR-ы за&nbsp;требуемый период находятся в&nbsp;папке для&nbsp;CDR-ов.<br />
+<br />
+2. Поправить файл с&nbsp;датой последней загрузки CDR-ов в&nbsp;биллинге, на&nbsp;дату с&nbsp;которой нужно подгрузить логи. <br />
+<br />
+<em><u>Замечание:</u> Если производится загрузка CDR-ов с&nbsp;удаленной Меры, все&nbsp;действия нужно производить на&nbsp;этой удаленной Мере.</em><br />
+<br />
+В&nbsp;консоли сервера нужно выполнить команды:<br />
+<br />
+<div class="indent">cd /usr/local/billing<br />
+vi&nbsp;lastupdated</div>
+<br />
+в&nbsp;этом файле &#147;lastupdated&#148; хранится дата последней загрузки CDR-ов в&nbsp;формате: <!--notypo-->&lt;год&gt;&lt;месяц&gt;&lt;день&gt;&lt;час&gt;&lt;минуты&gt;&lt;секунды&gt;<!--/notypo--><br />
+<br />
+<div class="indent">Пример: 20070130130000 (<span class="nobr">2007&ndash;01&ndash;30</span> 13:00:00)</div>
+<br />
+Нужно исправить дату, на&nbsp;дату с&nbsp;которой планируется загрузить CDR-ы, например: 20070102000000 (<span class="nobr">2007&ndash;01&ndash;02</span> 00:00:00)<br />
+Сохранить результат и&nbsp;закрыть файл. <br />
+<br />
+3. При&nbsp;следующем процессе парсинга, биллинг автоматически начнет загрузку CDR-ов начиная с&nbsp;указанной даты.<br />
+Можно запустить процесс парсинга в&nbsp;ручную, выполнив команду:<br />
+<br />
+<div class="indent">/usr/local/billing/bin/load_cdr.pl</div>
+<br />
+<em><u>Примечание:</u> Процесс парсинга довольно длительный, чем&nbsp;больше период загрузки, тем&nbsp;дольше будет проходить процесс. Загрузка данных за&nbsp;пару дней может занимать час&nbsp;и&nbsp;более по&nbsp;времени. Длительность процесса вызвана многочисленными проверками, которые производятся над&nbsp;каждым загружаемым звонком, на&nbsp;его наличие в&nbsp;базе биллинга. Это&nbsp;сделано, чтобы избежать дублирования данных.</em><br />
+<br />
+4. Можно проводить мониторинг процесса загрузки CDR-ов следующими командами:<br />
+<br />
+<div class="indent">ps ax&nbsp;| grep load_cdr.pl</div>
+<br />
+Если процесс выполняется, значит загрузка еще&nbsp;идет. Когда процесс прекратит выполняться, значит загрузка данных завершена.<br />
+<br />
+<div class="indent">more /usr/local/billing/lastupdated</div>
+<br />
+Покажет последнюю дату, за&nbsp;которую биллинг уже&nbsp;обработал CDR-ы, по&nbsp;мере подгрузки данных значение даты и&nbsp;времени в&nbsp;этом файле будут меняться.<br />
+<br />
+5. По&nbsp;завершению процесса загрузки нужно провести полный пересчет статистики в&nbsp;биллинге (Reports &ndash; Recalculation &ndash; Recalculate calls) за&nbsp;период подгрузки CDR-ов.<br />
+<br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/PodgruzkaCDR/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/ProverkaOperatora/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ПримерыРаботыСipStudioAmbs/ПроверкаОператора</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%CF%F0%E8%EC%E5%F0%FB%D0%E0%E1%EE%F2%FB%D1ipStudioAmbs%2F%CF%F0%EE%E2%E5%F0%EA%E0%CE%EF%E5%F0%E0%F2%EE%F0%E0">ПримерыРаботыСipStudioAmbs/ПроверкаОператора</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<strong> <a name=".." href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong><br />
+<a name="h73-1"></a><h2>Прямое тестирование шлюзов опертора (Direct route test)</h2>
+<br />
+Для&nbsp;упрощения проверки шлюзов терминирующих операторов можно использовать функцию,<br />
+позволяющую направить звонок прямо на&nbsp;сайт нужного оператора (Direct route test).<br />
+<br />
+Чтобы произвести тестирование нужно:<br />
+<ol type="1"><li> Завести своего &laquo;тестового оператора&raquo; с&nbsp;шлюза(ов) которого будите производиться тестирование.
+</li><li> Поставить заведенному оператору тариф оригинации &ndash; Себестоимость (Prime cost).
+</li><li> В&nbsp;форме &#147;Route test&#148; построить маршрут от&nbsp;&laquo;тестового оператора&raquo; по&nbsp;тестовому номеру (здесь же&nbsp;можно брать ID-сайтов операторов).
+</li><li> Для&nbsp;тестирования нужно набирать номер звонка в&nbsp;формате: <strong>000&lt;Oper_ID&gt;*тестовый номер</strong></li></ol>
+<br />
+<div class="indent">где Oper_ID &ndash; ID-сайта терминирующего оператора, можно посмотреть в&nbsp;форме операторов или&nbsp;в&nbsp;Route test</div>
+<br />
+Для&nbsp;правильной работы функции прямого тестирования, нужно:<br />
+<ul><li> В&nbsp;разделе Administration – Configugation – Routing parameters установить параметр: <strong><!--notypo-->DELIM<!--/notypo--></strong>=*
+</li><li> В&nbsp;файле “dialpeer.cfg” на&nbsp;MVTS-сервере установить параметр: <strong><!--notypo-->dst_pattern<!--/notypo--></strong>=.*</li></ul>
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong><br /></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/ProverkaOperatora/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

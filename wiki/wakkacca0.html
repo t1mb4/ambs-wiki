@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/LogiAMBS/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : ПримерыРаботыСipStudioAmbs/ЛогиAMBS</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=%CF%F0%E8%EC%E5%F0%FB%D0%E0%E1%EE%F2%FB%D1ipStudioAmbs%2F%CB%EE%E3%E8AMBS">ПримерыРаботыСipStudioAmbs/ЛогиAMBS</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<strong> <a name=".." href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong><a name="h215-1"></a><h1>Логи IP&nbsp;Studio AMBS</h1>
+<a name="h215-2"></a><h3>Расположение логов</h3>
+<br />
+Лог-файлы расположены в&nbsp;следующих директориях:<br />
+<br />
+<table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Лог-файлы</strong></td><td  class="usercell"><strong>Расположение</strong></td></tr>
+<tr class="userrow"><td class="usercell" colspan="2"><hr noshade="noshade" size="1" /></td></tr>
+<tr class="userrow"><td class="usercell">Логи работы скриптов AMBS (логи работы &ndash; .log, логи ошибок &ndash; .err)</td><td  class="usercell">/usr/local/billing/logs<br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Лог RADIUS-а</td><td  class="usercell">/usr/local/billing/radius/radius.err<br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Логи апача</td><td  class="usercell">/usr/local/billing/apache/logs/error_log<br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Лог <!--notypo-->MySql<!--/notypo--></td><td  class="usercell">/usr/local/billing/base/&lt;лог_файл&gt;.err<br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Логи обработки звонков AMBS</td><td  class="usercell">/usr/local/billing/radius/cplog&lt;гг-мм-дд&gt;.&lt;чч&gt;<br />
+</td></tr>
+<tr class="userrow"><td class="usercell">Логи обработки карточек AMBS</td><td  class="usercell">/usr/local/billing/radius/cardlog&lt;гг-мм-дд&gt;.&lt;чч&gt;<br />
+</td></tr>
+</table>
+<a name="h215-3"></a><h3>Логи радиуса</h3>
+<br />
+В&nbsp;некоторых случаях при&nbsp;возникновении проблем с&nbsp;маршрутизацией или&nbsp;с&nbsp;работой радиус-процессов, когда не&nbsp;удается найти причину проблемы из&nbsp;веб-интерфейса системы, приходится прибегать к&nbsp;разбору лога работы радиуса.   <br />
+<br />
+Лог-файлы радиуса хранятся в&nbsp;папке &laquo;radius/&raquo; в&nbsp;следующем формате: /usr/local/billing/radius/cplog&lt;гггг-мм-дд&gt;.&lt;чч&gt; <br />
+<br />
+Пример:  ls&nbsp;/usr/local/billing/radius/cplog070831.*<br />
+cplog070831.00  cplog070831.01  cplog070831.02  cplog070831.03  <br />
+<br />
+Для&nbsp;работы с&nbsp;логами рекомендуем установить параметр &laquo;Trace 4&quot; в&nbsp;конфигурационном файле радиуса:<br />
+<div class="indent">/usr/local/billing/radius/radius.cfg</div>
+и&nbsp;перезапустить радиус процессы. <br />
+<br />
+В&nbsp;лог-файле радиуса найдите лог&nbsp;за&nbsp;час, когда вы&nbsp;делали тестовые звонки, откройте этот файл и&nbsp;найдите по&nbsp;номеру в&nbsp;логе секцию с&nbsp;вашим тестовым номером, пример:<br />
+<!--notypo--><textarea class="code" rows="12" readonly="readonly">Wed Aug 29 15:45:42 2007: NOTICE: proc(5)Mera authorization
+Wed Aug 29 15:45:42 2007: NOTICE: proc(5)IP 192.168.0.100 number 74832977111
+Wed Aug 29 15:45:42 2007: NOTICE: proc(5)2007829000 2006428000 999911000
+Wed Aug 29 15:45:42 2007: NOTICE: proc(5)chek ip 192.168.0.100  in mera 10.10.10.10 my oper_id = 54
+Wed Aug 29 15:45:42 2007: NOTICE: proc(5)Originate price =0.9999
+Wed Aug 29 15:45:42 2007: NOTICE: proc(5)Find direct routes for this dest:SELECT HIGH_PRIORITY oper_ip.* from SITE,oper_ip where SITE.ID=56
+            AND oper_ip.OP_ID=SITE.ID AND oper_ip.MERA_ID=12
+            AND rec_type IN (0,3,3)  AND gateway_mode IN (3,3) AND oper_ip.state=0
+            AND oper_ip.START_DATE&lt;=CURRENT_DATE AND oper_ip.STOP_DATE&gt;CURRENT_DATE ORDER BY priority desc
+Wed Aug 29 15:45:42 2007: NOTICE: proc(5)Term_Oper_16_GW_2/0/9977111/703/74832977111 - price= - 
+Wed Aug 29 15:45:42 2007: NOTICE: proc(5)Access accepted, return code = 0</textarea><!--/notypo--><br />
+<br />
+Из&nbsp;примера видно, что&nbsp;звонок обработал пятый радиус-процесс (<em>proc(5)</em>). Дальше смотрим записи по&nbsp;этому номеру процесса, начиная <br />
+со&nbsp;строки &laquo;<em>proc(5)Mera authorization</em>&raquo; когда пришел звонок и&nbsp;до строки &laquo;<em>proc(5)Access accepted, return code = 0</em>&raquo; идет обработка радиусом звонка.  <br />
+Эта&nbsp;как раз&nbsp;та&nbsp;часть лога которую нужно разбирать. <br />
+В&nbsp;приведенном выше примере видно, что&nbsp;радиус нашел настройки &#147;<em>direct route</em>&#148; для&nbsp;звонка, поэтому никакие другие операторы <br />
+для&nbsp;этого звонка в&nbsp;маршрутизацию не&nbsp;попадают.<br />
+<br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Примечание:</strong></td><td  class="usercell"> Можно регулировать уровень детализации лога радиуса, для&nbsp;этого нужно в&nbsp;конфигурационном файле радиуса (&laquo;/usr/local/billing/radius/radius.cfg&raquo;)  изменить значение параметра &#147;Trace&#148; (может принимать значения <span class="nobr">1&ndash;4</span>).</td></tr>
+</table></div></div> <br />
+<br />
+<a name="h215-4"></a><h3>Поиск лога звонка в&nbsp;CDR-файле Меры</h3>
+<br />
+Предположим был&nbsp;сделан звонок на&nbsp;номер &#147;74832977111&#148; и&nbsp;нам нужно найти его&nbsp;запись в&nbsp;CDR-е Меры, понять как&nbsp;его обработала Мера.<br />
+Прежде всего нам&nbsp;понадобиться найти где&nbsp;на&nbsp;сервере располагается Мера, для&nbsp;этого выполняем команду:<br />
+<br />
+<div class="indent">ps ax&nbsp;| grep kernel</div>
+<br />
+Получаем результат примерно следующего вида:<br />
+<br />
+<!--notypo--><textarea class="code" rows="7" readonly="readonly">22871 ?        R    1879:01 /mvts/./bin/mp_kerneld.x -x -c /mvts/./cfg/meraproxy.cfg
+22872 ?        R    1881:45 /mvts/./bin/mp_kerneld.x -x -c /mvts/./cfg/meraproxy.cfg
+22873 ?        S    1881:49 /mvts/./bin/mp_kerneld.x -x -c /mvts/./cfg/meraproxy.cfg
+22874 ?        S    1885:29 /mvts/./bin/mp_kerneld.x -x -c /mvts/./cfg/meraproxy.cfg
+22875 ?        S    1889:10 /mvts/./bin/mp_kerneld.x -x -c /mvts/./cfg/meraproxy.cfg
+31746 pts/0    S      0:00 grep kernel</textarea><!--/notypo--><br />
+<br />
+Из&nbsp;результата видим, что&nbsp;Мера располагается в&nbsp;папке &laquo;/mvts/&raquo; (часто располагается в&nbsp;директории &laquo;/usr/local/mvts&raquo;). <br />
+Теперь заходим в&nbsp;папку CDR-ов, обычно это&nbsp;&laquo;/mvts/billing/&raquo; и&nbsp;смотрим какие там&nbsp;есть файлы командой:<br />
+<br />
+<div class="indent">ls -la  </div>
+<br />
+Обычно файлов много, получим результат примерно следующего вида:<br />
+<br />
+<!--notypo--><textarea class="code" rows="15" readonly="readonly">-rw-------    1 voip     voip  495 Aug 31 13:39 .tmp_log_11ea22xx660d36xx2dba3544b42c8xx56a8fxx7
+-rw-r-----    1 voip     voip      0 Jul    9 14:58 bill20070709_140000
+-rw-r-----    1 voip     voip      0 Jul    9 15:00 bill20070709_150000
+-rw-r-----    1 voip     voip  286 Jul    9 19:00 bill20070709_180000
+-rw-r-----    1 voip     voip  465 Jul    9 20:00 bill20070709_190000
+
+............................................................
+
+-rw-r-----    1 voip     voip  669 Aug 31 09:00 bill20070831_080000
+-rw-r-----    1 voip     voip  357 Aug 31 10:00 bill20070831_090000
+-rw-r-----    1 voip     voip  449 Aug 31 11:00 bill20070831_100000
+-rw-r-----    1 voip     voip  905 Aug 31 12:00 bill20070831_110000
+-rw-r-----    1 voip     voip  068 Aug 31 13:00 bill20070831_120000
+drw-r-----    2 voip     voip 096 Mar 10  2005 lost+found</textarea><!--/notypo--><br />
+<br />
+Файлы с&nbsp;названиями типа &#147;bill20070831_110000&#148; это&nbsp;законченные файлы за&nbsp;прошедшие часы работы (Мера пишет новый файл на&nbsp;каждый час&nbsp;работы).<br />
+<br />
+Файл типа &#147;.tmp_log_11ea22xx660d36xx2dba3544b42c8xx56a8fxx7&#148; это&nbsp;рабочий файл Меры за&nbsp;текущий час, по&nbsp;завершению часа Мера переименует его&nbsp;в&nbsp;&laquo;bill&lt;гггг-мм-дд&gt;_&lt;чч&gt;0000&#148; и&nbsp;создаст новый временный файл. <br />
+<br />
+Ищем прошедший тестовый звонок в&nbsp;том файле за&nbsp;который час&nbsp;он&nbsp;проходил. Например звонок был&nbsp;сделан в&nbsp;текущем часу, тогда смотрим лог&nbsp;&#147;.tmp_log_......&raquo; и&nbsp;ищем наш&nbsp;номер. <br />
+Мера пишет Лог&nbsp;каждого звонка в&nbsp;отдельной строке, поэтому мы&nbsp;можем дать поиск сразу из&nbsp;командной строки следующей командой:<br />
+<br />
+<div class="indent">more .tmp_log_11ea22xx660d36xx2dba3544b42c8xx56a8fxx7 | grep 74832977111</div>
+<br />
+Результат поиска будет иметь вид&nbsp;(пример):<br />
+<br />
+<!--notypo-->Wed Aug 29 15:46:11 2007, HOST=10.10.10.10, SRC-NUMBER-IN=70312312312, DST-NUMBER-IN=74832977111, SRC-NUMBER-OUT=70312312312, DST-NUMBER-OUT=748329977111, SRC-NUMBER-BILL=70312312312, DST-NUMBER-BILL=74832977111, SRC-IP=192.168.0.100:5060, DST-IP=192.168.0.200:5060, SRC-USER=192.168.0.100, SRC-NAME=Orig_Oper_4_GW_1, DST-NAME=Term_Oper_16_GW_2, DIALPEER-NAME=RADIUS_PEER, INITIAL-INCOMING-LOCAL-ADDRESS=10.10.10.10, SELECTED-INCOMING-LOCAL-ADDRESS=85.249.120.40, OUTGOING-LOCAL-ADDRESS=10.10.10.10, RECORD-ID=123456-7890, ELAPSED-TIME=24, SETUP-TIME=15:45:42.000 +0400 Wed Aug 29 2007, CONNECT-TIME=15:45:43.000 +0400 Wed Aug 29 2007, DISCONNECT-TIME=15:46:07.000 +0400 Wed Aug 29 2007, DISCONNECT-CODE-LOCAL=2, DISCONNECT-CODE-Q931=16, SRC-BYTES-IN=716, DST-BYTES-IN=639, SRC-BYTES-OUT=571, DST-BYTES-OUT=758, QOS=0, SRC-CODEC=g729 g729A g7231 g711A64k g711U64k , DST-CODEC=g729 , CALLID=1234567890, CONFID=0987654321, PROXY-MODE=0, ROUTE-RETRIES=2, PDD-TIME=1<!--/notypo--><br />
+<br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong>Примечание:</strong></td><td  class="usercell"> Если за&nbsp;текущий час&nbsp;было совершено несколько звонков на&nbsp;искомый номер, результат поиска выдаст несколько таких объемных строк, по&nbsp;одной строке на&nbsp;каждый прошедший звонок..</td></tr>
+</table></div></div> <br />
+<br />
+Из&nbsp;полученного результат мы&nbsp;видим, что:<br />
+<br />
+Звонок на&nbsp;номер &laquo;DST-NUMBER-BILL=74832977111&raquo;, совершенный &laquo;Aug 29 15:46", с&nbsp;адреса &laquo;SRC-IP=192.168.0.100&raquo;, был&nbsp;отправлен на&nbsp;шлюз терминирующего оператора &laquo;DST-NAME=Term_Oper_16_GW_2&raquo; (с адресом &laquo;DST-IP=192.168.0.200&raquo;). Продолжительность разговора составила &laquo;ELAPSED-TIME=24&raquo; секунды и&nbsp;звонок был&nbsp;успешно завершен &laquo;DISCONNECT-CODE-Q931=16&raquo;, вызываемой стороной &laquo;DISCONNECT-CODE-LOCAL=2&raquo;.<br />
+<br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs&amp;v=1c1f" class="" title="ПримерыРаботыСipStudioAmbs/..">В оглавление</a> </strong><br /></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=PrimeryRabotySipStudioAmbs/LogiAMBS/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

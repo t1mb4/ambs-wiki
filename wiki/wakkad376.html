@@ -1,0 +1,165 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual/CardAuthExaple&v=13w5 by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>
+  	IpstudioWiki : Ambs&nbsp;Cards&nbsp;Manual&nbsp;/&nbsp;Card&nbsp;Auth&nbsp;Exaple  </title>
+			  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <link rel="stylesheet" type="text/css" href="themes/default/css/wakka.css" />
+  <link rel="shortcut icon" href="themes/default/icons/wacko.ico" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" title="RecentChanges in RSS" href="xml/recentchanges_ipstudiowiki.xml" />
+  <link rel="alternate" type="application/rss+xml" title="History/revisions of AmbsCardsManual/CardAuthExaple in RSS" href="wakka79e0.php?wakka=AmbsCardsManual/CardAuthExaple/revisions.xml" />
+
+<script language="JavaScript" type="text/javascript" src="js/default.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/protoedit.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/wikiedit2.js"></script>
+
+</head>
+
+<body onload="all_init();" leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0">
+
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+
+<form action="http://78.46.73.113/wiki/wakka.php?wakka=Login"  method="post" >
+<input type="hidden" name="wakka" value="Login" />
+<input type="hidden" name="action" value="login" />
+<div class="header">
+  <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  	<tr>
+  		<td align="left" class="logo_header">
+  		
+  		</td>
+  		<td align="right" valign="top" class="logo_header"> 
+								<span>
+					<a href="wakka6b42.html?wakka=Login">
+						<b>Вход</b>
+					</a>
+				</span>
+				<!-- <span class="nobr"><input type="hidden" name="goback" value="AmbsCardsManual/CardAuthExaple" 
+				/><strong>Вход:&nbsp;</strong><input 
+				type="text" name="name" size="18" class="login" />&nbsp;Пароль:&nbsp;<input type="password" name="password"  
+				class="login" size="8" />&nbsp;<input type="image" 
+				src="http://78.46.73.113/wiki/themes/default/icons/login.gif" alt=">>>" align="top" /></span>-->
+							</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="bookmarks">
+							</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="logo_header">
+				<b>
+				<!--     <span class="main">IpstudioWiki:</span> -->
+				     <span class="main"><a href="wakkad0e2.html?wakka=KnowledgeBase">Knowledge&nbsp;Base</a></span>
+								     <span class="main">:: <a  href="wakkab5bd.html?wakka=AmbsCardsManual&amp;v=orj" class="" title="Ambs&nbsp;Cards&nbsp;Manual">AmbsCardsManual</a>/CardAuthExaple</span>     
+								</b>
+				<!--     <span class="main"><a class="Search" title="" 
+				     href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch&amp;phrase=AmbsCardsManual%2FCardAuthExaple">...</a></span> -->
+				</td>
+			</tr>
+		</table>
+</form>
+
+<div class="pageBefore">
+	<img src="images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" />
+</div><div class="page">
+<a name="p-1926-1"></a><p class="auto" id="p-1926-1"><!--notypo--><a name="PageTopLink" href="#PageTopLink" title=""></a>
+<!--/notypo--></p><a name="h218-1"></a><h1>Раздел “Cards”</h1><a name="p-1926-2"></a><p class="auto" id="p-1926-2">
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<strong> <a name=".ambscardsmanual" href="wakkab5bd.html?wakka=AmbsCardsManual&amp;v=orj" class="" title="Ambs&nbsp;Cards&nbsp;Manual">В оглавление</a> </strong><br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><a name="CardAuthExaple" href="#CardAuthExaple" title=""></a>
+<!--/notypo--></p><a name="h218-2"></a><h2>Пример пакетов авторизации (PIN,ANI)</h2>
+<br /><a name="p-1926-3"></a><p class="auto" id="p-1926-3">
+<strong>PIN Authorization:</strong></p><br /><a name="p-1926-4"></a><p class="auto" id="p-1926-4">
+При&nbsp;авторизации по&nbsp;PIN-у карты, биллинг ждет от&nbsp;карточной платформы пакет вида:<br />
+<!--notypo--><textarea class="code" rows="15" readonly="readonly">*** Received from 192.168.0.10 port 1645 ....
+Code:       Access-Request
+Identifier: 11
+Authentic:  O&lt;160&gt;&lt;22X&gt;&lt;170&gt;&lt;235&gt;&lt;1X3&gt;-^&lt;X34&gt;&lt;2&gt;c&lt;17X&gt;&lt;180&gt;&lt;1X&gt;&lt;11&gt;&lt;137&gt;
+Attributes:
+        User-Name = &quot;143314&quot;
+        User-Password = &quot;&lt;215&gt;&lt;180&gt;&lt;146&gt;X^&lt;196&gt;&lt;151&gt;X&gt;&lt;248&gt;&lt;2X&gt;&lt;208&gt;&lt;172&gt;I`'&quot;
+        cisco-h323-conf-id = &quot;h323-conf-id=5X4B488F 6AXB11DC 8B54X014 6944X05E&quot;
+        cisco-avpair = &quot;h323-ivr-out=transactionID:10&quot;
+        Calling-Station-Id = &quot;84951231231&quot;
+        Called-Station-Id = &quot;9991999&quot;
+        Service-Type = Login-User
+        NAS-IP-Address = 192.168.0.10
+        Acct-Session-Id = &quot;0000136D&quot;</textarea><!--/notypo--><br />
+где:</p><div class="indent">User-Name = &#147;143314&#148; &ndash; PIN, вводимый звонящим при&nbsp;подключении<br />
+Calling-Station-Id = &#147;84951231231&#148; &ndash; ANI-номер звонящего<br />
+Called-Station-Id = &#147;9991999&#148; &ndash; DNIS-номер доступа на&nbsp;карточную платформу</div>
+<br /><a name="p-1926-5"></a><p class="auto" id="p-1926-5">
+<strong>ANI Authorization:</strong></p><br /><a name="p-1926-6"></a><p class="auto" id="p-1926-6">
+При&nbsp;авторизации по&nbsp;ANI-номеру звонящего, биллинг ждет от&nbsp;карточной платформы пакет вида:<br />
+<!--notypo--><textarea class="code" rows="15" readonly="readonly">*** Received from 192.168.0.10 port 1645 ....
+Code:       Access-Request
+Identifier: 14
+Authentic:  &lt;212&gt;X&lt;155&gt;}r&lt;2X2&gt;X&lt;159&gt;X&lt;228&gt;EX?&lt;2X9&gt;&lt;164&gt;tX
+Attributes:
+        User-Name = &quot;74951231231&quot;
+        User-Password = &quot;&lt;255&gt;&lt;172&gt;&lt;1X8&gt;x&lt;229&gt;&lt;2X4&gt;&lt;227&gt;g&lt;30&gt;g&lt;186&gt;,&lt;1X4&gt;&lt;207&gt;&lt;2X9&gt;&lt;213&gt;&quot;
+        cisco-h323-conf-id = &quot;h323-conf-id=D5X636D8 6AXB11DC 8BX80014 69X4C05E&quot;
+        cisco-avpair = &quot;h323-ivr-out=transactionID:13&quot;
+        Calling-Station-Id = &quot;74951231231&quot;
+        Called-Station-Id = &quot;9991999&quot;
+        Service-Type = Login-User
+        NAS-IP-Address = 192.168.0.10
+        Acct-Session-Id = &quot;00001379&quot;</textarea><!--/notypo-->        <br />
+где:</p><div class="indent">User-Name = &#147;74951231231&#148; &ndash; ANI-номер звонящего<br />
+Calling-Station-Id = &#147;74951231231&#148; &ndash; ANI-номер звонящего<br />
+Called-Station-Id = &#147;9991999&#148; &ndash; DNIS-номер доступа на&nbsp;карточную платформу</div>
+<br /><a name="p-1926-7"></a><p class="auto" id="p-1926-7">
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--></p><div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong><a name="cardlogs" href="http://www.ipstudio.net/wiki/wakka.php?wakka=AmbsCardsManual/CardLogs&amp;v=1uf" class="" title="AmbsCardsManual/Card&nbsp;Logs">&lt;&lt; Назад</a></strong></td><td class="usercell"> <strong><a href="#PageTopLink" name="oPageTopLink">< Наверх ></a></strong></td><td  class="usercell"><strong><a name=".ambscardsmanual" href="http://www.ipstudio.net/wiki/wakka.php?wakka=AmbsCardsManual&amp;v=13bv" class="" title="Ambs&nbsp;Cards&nbsp;Manual">Вперед &gt;&gt;</a></strong></td></tr>
+</table></div></div>   <script language="JavaScript" type="text/javascript">
+   var dbclick = "page";
+  </script>
+ <br style="clear:both" />&nbsp;
+</div>
+
+<form action="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch"  method="get" >
+<input type="hidden" name="wakka" value="TextSearch" />
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+	<tr>
+		<td>
+			 
+			
+			  <span class="searchbar nobr">Поиск: <input type="text" name="phrase" size="25" style="border: none; border-bottom: 1px solid #CCCCAA; padding: 0px; margin: 0px;" /></span>
+		</td>
+		<td align="right">
+			<a href="wakkac77b.html?wakka=AmbsCardsManual/CardAuthExaple/print" target="_new"><img src="themes/default/icons/1print.gif" title="Версия для печати" alt="Версия для печати"  align="middle" border="0" /></a>		</td>
+	</tr>
+</table>
+
+</form>
+
+
+<table class="copyright" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="left" class="copyright">
+			Created by <a target="_blank" class="copyright" href="http://www.ipstudio.net/">IP Studio Inc.</a>© 2007
+		</td>
+		<td align="right" class="copyright">
+			Powered by <a href="http://wackowiki.com/WackoWiki" target="_blank" title="" class="outerlink">WackoWiki R4.2</a>		</td>
+	</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual/CardAuthExaple&v=13w5 by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>

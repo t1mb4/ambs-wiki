@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual/CardLogs/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+<head>
+  <title>IpstudioWiki : AmbsCardsManual/CardLogs</title>
+<meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="http://78.46.73.113/wiki/themes/default/css/wakkaprint.css" />
+</head>
+
+<body>
+
+<div class="header">
+  IpstudioWiki : <a href="http://78.46.73.113/wiki/wakka.php?wakka=TextSearch?phrase=AmbsCardsManual%2FCardLogs">AmbsCardsManual/CardLogs</a> 
+</div>
+
+<div class="pageBefore"><img src="http://78.46.73.113/wiki/images/z.gif" width="1" height="1" border="0" alt="" style="display:block" align="top" /></div><div class="page">
+<!--notypo--><a name="PageTopLink" href="#PageTopLink" title=""></a>
+<!--/notypo--><a name="h217-1"></a><h1>Раздел “Cards”</h1>
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<strong> <a  href="http://78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual&amp;v=orj" class="" title="Ambs&nbsp;Cards&nbsp;Manual">В оглавление</a> </strong><br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><a name="CardLogs" href="#CardLogs" title=""></a>
+<!--/notypo--><a name="h217-2"></a><h2>Полный лог&nbsp;обработки карты</h2>
+<br />
+<strong>1.</strong> В&nbsp;файле:<br />
+<div class="indent">/usr/local/billing/radius/card.cfg</div>
+<br />
+Выставить параметр: <br />
+<div class="indent">Trace           4</div>
+<br />
+<strong>2.</strong> Сбросить карточный радиус. <br />
+<div class="indent">ps ax&nbsp;| grep rad</div>
+<br />
+найти строку типа:<br />
+<div class="indent"><!--notypo-->5062 ?        S&lt;     2:44 /usr/local/billing/bin/radiusd -config_file /usr/local/billing/radius/card.cfg -pid_file /usr/local/billing/radius/rad_card.pid<!--/notypo--></div>
+<br />
+и&nbsp;сбросить ее:<br />
+<div class="indent"><!--notypo-->kill -9 5062<!--/notypo--></div>
+<br />
+<strong>3.</strong> Повторно запустить карточный радиус:<br />
+<div class="indent">/etc/init.d/card start</div>
+<br />
+<strong>4.</strong> Обнулить карточный лог, чтобы убрать лишние записи:<br />
+<div class="indent"><!--notypo-->&gt; /usr/local/billing/radius/logfile<!--/notypo--></div>
+<br />
+<strong>5.</strong> Сделать тестовый звонок <br />
+<br />
+<strong>6.</strong> Проверить лог&nbsp;на&nbsp;наличие записей об&nbsp;тестовом звонке:<br />
+<div class="indent">less /usr/local/billing/radius/logfile</div>
+<br />
+Найти все&nbsp;блоки строк обработки звонка:<br />
+<div class="indent">Authentic<br />
+Accounting-Request<br />
+Accounting-Response</div>
+<br />
+Локализовать и&nbsp;исправить проблему.<br />
+<!--notypo--><!--/notypo--><br />
+<!--notypo--><!--/notypo--><br />
+<div class="action"><div class="action-content"><table class="dtable" border="0">
+<tr class="userrow"><td class="usercell"><strong><a name=".ambscardsmanual" href="http://78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual&amp;v=orj" class="" title="Ambs&nbsp;Cards&nbsp;Manual">&lt;&lt; Назад</a></strong></td><td class="usercell"> <strong><a href="#PageTopLink" name="oPageTopLink">< Наверх ></a></strong></td><td  class="usercell"><strong><a name="cardauthexaple" href="http://78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual/CardAuthExaple&amp;v=13w5" class="" title="AmbsCardsManual/Card&nbsp;Auth&nbsp;Exaple">Вперед &gt;&gt;</a></strong></td></tr>
+</table></div></div></div>
+</body>
+<!-- Mirrored from 78.46.73.113/wiki/wakka.php?wakka=AmbsCardsManual/CardLogs/print by HTTrack Website Copier/3.x [XR&CO'2006], Wed, 25 Jul 2012 16:14:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=windows-1251"><!-- /Added by HTTrack -->
+</html>
